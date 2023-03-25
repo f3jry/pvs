@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class AbilityBase : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string abilityName;
+    int range;
+
+    public virtual void CallAbility()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
