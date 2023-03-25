@@ -7,10 +7,15 @@ public class plant : MonoBehaviour
     public PlantParent pr;
     public KytkaPopUp pop;
     public SpriteRenderer ps;
+    KolaManager km;
+    int lastkolo;
+    int hp;
+    bool vyrostla = false;
     // Update is called once per frame
     private void Start()
     {
         pop = FindObjectOfType<KytkaPopUp>();
+        km = FindObjectOfType<KolaManager>();
         ps.sprite = pr.FruitSprite;
     }
     private void OnMouseEnter()
@@ -21,5 +26,13 @@ public class plant : MonoBehaviour
     {
         if (pop != null) { pop.kytka.SetActive(false); }
     }
-    
+    private void Update()
+    {
+        if (lastkolo != km.kolo)
+        {
+            vyrostla = true;
+        }
+
+        lastkolo = km.kolo;
+    }
 }
