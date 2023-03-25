@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4012303176969726791
@@ -139,8 +139,10 @@ MonoBehaviour:
   pop: {fileID: 0}
   ps: {fileID: 2938923075625939545}
   plantsprite: {fileID: 2392655425943184851}
-  growimage: {fileID: 21300000, guid: 543562b8d533091439dfd11f4bc396b8, type: 3}
+  growimage: {fileID: 21300000, guid: 752a80451ab8804499a4e780a19f7e40, type: 3}
   smallimage: {fileID: 21300000, guid: 3077901bcceb1c44eb3a52bd819d8e27, type: 3}
+  range: 1
+  ability: 
 --- !u!61 &7476866610644112561
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -289,7 +291,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7527495710566187864
