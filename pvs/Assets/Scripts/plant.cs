@@ -9,12 +9,12 @@ public class plant : MonoBehaviour
     public SpriteRenderer ps;
     public SpriteRenderer plantsprite;
     KolaManager km;
-    int lastkolo;
     int hp;
     bool vyrostla = false;
     int growstage = 0;
     public Sprite growimage;
     public Sprite smallimage;
+    public float range = 1;
     // Update is called once per frame
     private void Start()
     {
@@ -23,8 +23,8 @@ public class plant : MonoBehaviour
         pop = FindObjectOfType<KytkaPopUp>();
         km = FindObjectOfType<KolaManager>();
         ps.sprite = pr.FruitSprite;
+        PlantManager.instance.allPlants.Add(this);
         ps.enabled = false;
-        lastkolo = km.kolo;
     }
     private void OnMouseEnter()
     {
@@ -34,23 +34,20 @@ public class plant : MonoBehaviour
     {
         if (pop != null) { pop.kytka.SetActive(false); }
     }
-    private void Update()
+    public void grow()
     {
-        if (lastkolo != km.kolo)
-        {
-            if (growstage == 1)
-            {
-                vyrostla = true;
-                ps.enabled = true;
-            }
-            else
-            {
-                plantsprite.sprite = growimage;
-            }
-
-            growstage += 1;
+        print("grow");
+        growstage += 1;
+        if (growstage == 0) { plantsprite.sprite = smallimage; }
+        if (growstage == 1) {plantsprite.sprite = growimage; }
+        if (growstage == 2) {
+            vyrostla = true;
+            ps.enabled = true;
+                
         }
-        if(growstage == 0) { plantsprite.sprite = smallimage; }
-        lastkolo = km.kolo;
+        else
+        {
+            ps.enabled = true;
+        }
     }
 }

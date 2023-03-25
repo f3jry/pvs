@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a80a7a85d4aaa43be1a9720bd16d06, type: 3}
   m_Name: Mrkev
   m_EditorClassIdentifier: 
-  FruitSprite: {fileID: 21300000, guid: 01ee7b82bb92df542bbfa4557dffc303, type: 3}
+  FruitSprite: {fileID: 21300000, guid: 25fe5cf4b791908419f9e7366747119c, type: 3}
   Name: "Mrkvov\xE1 rostlina"
   AbilityDescription: "Roste na n\xED mrkvi\u010Dka."
-  BaseAbility: {fileID: 0}
+  AbilityName: 
+  PriceSell: 0
+  PriceBuy: 0

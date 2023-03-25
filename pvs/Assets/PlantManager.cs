@@ -14,7 +14,13 @@ public class PlantManager : MonoBehaviour
     {
         instance = this;
     }
-
+    public void updateplants()
+    {
+        foreach (plant g in allPlants)
+        {
+            g.grow();
+        }
+    }
     // Update is called once per frame
     void Update()
     {

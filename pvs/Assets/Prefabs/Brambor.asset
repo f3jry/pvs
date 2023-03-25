@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a80a7a85d4aaa43be1a9720bd16d06, type: 3}
   m_Name: Brambor
   m_EditorClassIdentifier: 
-  FruitSprite: {fileID: 21300000, guid: 25c707b190e4eb04ca8273044c44b7bb, type: 3}
+  FruitSprite: {fileID: 21300000, guid: 58ad9c557c91f0e4c9072924b05d8012, type: 3}
   Name: "Bramborov\xE1 rostlina"
   AbilityDescription: "Roste na n\xED brambora."
-  BaseAbility: {fileID: 0}
+  AbilityName: 
+  PriceSell: 0
+  PriceBuy: 0
