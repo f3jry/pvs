@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class PlantAbilities : MonoBehaviour
 {
-    //assign from plant script
-    public string[] abilityName;
 
-    public AbilityBase[] currentAbilities;
+
+    public List<AbilityBase> currentAbilities = new List<AbilityBase>();
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (AbilityBase item in currentAbilities)
+        {
+            item.CallAbility(true);
+        }
     }
 
     // Update is called once per frame
@@ -21,17 +23,24 @@ public class PlantAbilities : MonoBehaviour
         
     }
 
-    //Call every round - stage 2
-    public void WorldClock()
+    //assign from plant script
+    public void AddAbility(string name)
     {
-        CallEffect();
+        foreach (AbilityBase item in GetComponents<AbilityBase>())
+        {
+            if(item.abilityName == name)
+            {
+                currentAbilities.Add(item);
+            }
+        }
     }
 
-    public void CallEffect()
+    //Call every round - stage 2
+    public void CallEffects()
     {
         foreach (AbilityBase item in currentAbilities)
         {
-            item.CallAbility();
+            item.CallAbility(false);
         }
     }
 

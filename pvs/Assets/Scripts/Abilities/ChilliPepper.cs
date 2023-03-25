@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class ChilliPepper : AbilityBase
 {
-    public override void CallAbility()
+    private void Awake()
     {
-        
+        abilityName = "Damage";
+    }
+
+
+    public override void CallAbility(bool start)
+    {
+        //thisPlant.ran
     }
 }
