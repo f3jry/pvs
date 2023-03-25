@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FruitSprite: {fileID: 0}
   Name: Potato
-  AbilityDescription: +1 Health
-  BaseAbility: {fileID: 0}
+  AbilityDescription: +1 HP
+  AbilityName: +HP
   PriceSell: 1
   PriceBuy: 2
