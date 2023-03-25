@@ -21,4 +21,5 @@ public class plant : MonoBehaviour
     {
         if (pop != null) { pop.kytka.SetActive(false); }
     }
+    
 }
