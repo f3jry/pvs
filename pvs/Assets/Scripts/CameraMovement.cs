@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0)) 
+        if (Input.GetMouseButton(1)) 
         {
             
             if (firstmouseposition == Vector3.zero) firstmouseposition = Input.mousePosition;
@@ -23,6 +23,10 @@ public class CameraMovement : MonoBehaviour
             print(firstmouseposition);
             tra.position = Vector3.Lerp(transform.position, transform.position + d, 10);
         }
-        if (Input.GetMouseButtonUp(0)) firstmouseposition = Vector3.zero;
+        if (Input.GetMouseButtonUp(1)) firstmouseposition = Vector3.zero;
+        Camera cam = GetComponent<Camera>();
+        GetComponent<Camera>().orthographicSize += Input.mouseScrollDelta.y * -5;
+        if (GetComponent<Camera>().orthographicSize < 5) cam.orthographicSize = 5;
+        else if (cam.orthographicSize > 30) cam.orthographicSize = 30;
     }
 }
