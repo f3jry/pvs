@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class plant : MonoBehaviour
 {
+    public int currentHealth;
+    public int baseHealth;
+
+
     public PlantParent pr;
     public KytkaPopUp pop;
     public SpriteRenderer ps;
+
+
+
     // Update is called once per frame
     private void Start()
     {
         pop = FindObjectOfType<KytkaPopUp>();
         ps.sprite = pr.FruitSprite;
+        baseHealth = 6;
     }
     private void OnMouseEnter()
     {
@@ -21,4 +29,8 @@ public class plant : MonoBehaviour
     {
         if (pop != null) { pop.kytka.SetActive(false); }
     }
+
+
+
+
 }
