@@ -15,7 +15,7 @@ public class gridcursor : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position,posint,0.2f);
 
 
-        if (Physics2D.OverlapCircle(transform.position, 0.5f))
+        if (Physics2D.OverlapCircle(transform.position + new Vector3(.5f, .5f), 0.4f))
         {
             currentGridTile = Physics2D.OverlapCircle(transform.position + new Vector3(.5f,.5f), 0.4f).gameObject;
         }

@@ -1110,6 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d6b7707d68ac44db00f65e9edb03bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentGridTile: {fileID: 0}
 --- !u!4 &857882587
 Transform:
   m_ObjectHideFlags: 0
@@ -2141,6 +2142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e65cc0934bc57418c1aa71bf8ef496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursor: {fileID: 857882585}
   plant: {fileID: 4012303176969726791, guid: dfe2d5b7639f64b4f9db96d8771ba5b1, type: 3}
   pr1: {fileID: 11400000, guid: 9e9becfa173bd7843824f8e5eb6a5016, type: 2}
   inv: {fileID: 1924468599}
