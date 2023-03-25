@@ -30,7 +30,7 @@ public class inventory : MonoBehaviour
     {
         selectedplant += Input.mouseScrollDelta.y * -1;
         print(selectedplant);
-        selected = inv[(int)selectedplant];
+        selected = inv[(inv)selectedplant];
         selected.
     }
 }
