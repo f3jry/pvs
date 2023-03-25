@@ -10,12 +10,12 @@ public class KytkaPopUp : MonoBehaviour
     public TMP_Text typkytkytext;
     public TMP_Text popiskytkytext;
     public Image obrazekkytkyimage;
-    public void Pop(string typkytky, string popiskytky, Texture2D obrazekkytky)
+    public void Pop(string typkytky, string popiskytky, Sprite obrazekkytky)
     {
         kytka.SetActive(true);
         typkytkytext.text = typkytky;
         popiskytkytext.text = popiskytky;
-        
+        obrazekkytkyimage.sprite = obrazekkytky;
     }
 
 }
