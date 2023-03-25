@@ -9,6 +9,7 @@ public class GridSystem : MonoBehaviour
 
     public Vector2Int gridsize;
     public float tileOffset;
+    // ahoj
 
     //[HideInInspector]
     public Transform[] GridTiles;
