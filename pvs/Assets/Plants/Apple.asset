@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52a80a7a85d4aaa43be1a9720bd16d06, type: 3}
-  m_Name: Chilli Pepper
+  m_Name: Apple
   m_EditorClassIdentifier: 
   FruitSprite: {fileID: 0}
-  Name: Chilli Pepper
-  AbilityDescription: Damage to each square in range
-  AbilityName: Damage
-  PriceSell: 3
-  PriceBuy: 5
+  Name: Apple
+  AbilityDescription: Heal everything in  range by 0.5 HP every round
+  AbilityName: Heal
+  PriceSell: 5
+  PriceBuy: 10

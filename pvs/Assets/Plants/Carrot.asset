@@ -15,6 +15,6 @@ MonoBehaviour:
   FruitSprite: {fileID: 0}
   Name: Carrot
   AbilityDescription: +2 Range
-  BaseAbility: {fileID: 0}
+  AbilityName: +Range
   PriceSell: 3
   PriceBuy: 5

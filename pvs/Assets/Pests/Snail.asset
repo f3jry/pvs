@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a80a7a85d4aaa43be1a9720bd16d06, type: 3}
-  m_Name: Chilli Pepper
+  m_Script: {fileID: 11500000, guid: ab4fefe69197ac047b6c67ec2338a90d, type: 3}
+  m_Name: Snail
   m_EditorClassIdentifier: 
-  FruitSprite: {fileID: 0}
-  Name: Chilli Pepper
-  AbilityDescription: Damage to each square in range
-  AbilityName: Damage
-  PriceSell: 3
-  PriceBuy: 5
+  Sprite: {fileID: 0}
+  Name: Snail
+  AbilityDescription: 
+  BaseAbility: {fileID: 0}
+  Damage: 1
+  HP: 10
