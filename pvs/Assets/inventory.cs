@@ -20,6 +20,7 @@ public class inventory : MonoBehaviour
         invseed.seedimage.sprite = pr.FruitSprite;
         invseed.pr = pr;
         inv.Add(invseed.gameObject);
+        invseed.infotext.text = pr.Name;
     }
     private void Start()
     {
@@ -38,7 +39,10 @@ public class inventory : MonoBehaviour
 
         print(selectedplant);
         selected = inv[(int)selectedplant];
-        
+        foreach (GameObject item in inv)
+        {
+            item.GetComponent<Image>().color = Color.black;
+        }
         selected.GetComponent<Image>().color = Color.red;
         selectedparent = selected.GetComponent<Inventoryseed>().pr;
     }
