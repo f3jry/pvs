@@ -17,9 +17,10 @@ public class PlantPlace : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && inv.selectedparent != null)
         {
             Placeplant(inv.selectedparent);
+            inv.deleteactive();
         }
     }
     public void Placeplant(PlantParent pr)
