@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GridSystem : MonoBehaviour
 {
-
+    public static GridSystem instance;
     public GameObject GridTile;
 
     public Vector2Int gridsize;
@@ -16,6 +16,8 @@ public class GridSystem : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        instance = this;
+
         CreateGrid(gridsize);
         centerGrid();
     }
