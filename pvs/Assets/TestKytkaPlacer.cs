@@ -18,7 +18,7 @@ public class TestKytkaPlacer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            gridSystem.PlacePlant(pos, tempKytkaObject);
+            //gridSystem.PlacePlantToPointer(tempKytkaObject);
 
         }
 
