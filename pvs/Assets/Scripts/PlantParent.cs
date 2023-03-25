@@ -7,4 +7,6 @@ public class PlantParent : ScriptableObject
     public string Name;
     public string AbilityDescription;
     public AbilityBase BaseAbility;
+    public int PriceSell;
+    public int PriceBuy;
 }
