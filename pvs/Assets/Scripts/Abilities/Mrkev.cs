@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Mrkev : AbilityBase
 {
-    public override void CallAbility()
+
+    private void Awake()
+    {
+        abilityName = "+Range";
+    }
+
+    public override void CallAbility(bool start)
     {
         
     }
