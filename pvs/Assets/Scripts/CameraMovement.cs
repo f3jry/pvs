@@ -19,7 +19,7 @@ public class CameraMovement : MonoBehaviour
             
             if (firstmouseposition == Vector3.zero) firstmouseposition = Input.mousePosition;
             Vector3 d = Vector3.zero;
-            d += (firstmouseposition - Input.mousePosition) / 100;
+            d += (firstmouseposition - Input.mousePosition) / 1000;
             print(firstmouseposition);
             tra.position = Vector3.Lerp(transform.position, transform.position + d, 10);
         }
