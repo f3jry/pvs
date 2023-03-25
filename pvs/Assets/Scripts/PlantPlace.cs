@@ -17,7 +17,7 @@ public class PlantPlace : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Placeplant(inv.selected.GetComponent<Inventoryseed>().pr);
+            Placeplant(inv.selectedparent);
         }
     }
     public void Placeplant(PlantParent pr)
@@ -27,6 +27,7 @@ public class PlantPlace : MonoBehaviour
         if (!ocupiedtiles.Contains(pos2))
         {
             GameObject insplant = Instantiate(plant);
+            insplant.GetComponent<plant>().pr = pr;
             insplant.transform.position = pos;
             ocupiedtiles.Add(insplant.transform.position);
         }

@@ -10,7 +10,8 @@ public class inventory : MonoBehaviour
     public PlantParent pr2;
     public Transform spawnobject;
     public GameObject selected;
-    float selectedplant = 0;
+    int selectedplant = 0;
+    public PlantParent selectedparent;
     void additem(PlantParent pr)
     {
         GameObject seeditem = Instantiate(plantprefab);
@@ -29,10 +30,16 @@ public class inventory : MonoBehaviour
     }
     private void Update()
     {
-        selectedplant += Input.mouseScrollDelta.y * -1;
+        if (Input.GetKeyDown("1")) { selectedplant = 0; }
+        if (Input.GetKeyDown("2")) { selectedplant = 1; }
+        if (Input.GetKeyDown("3")) { selectedplant = 2; }
+        if (Input.GetKeyDown("4")) { selectedplant = 3; }
+        if (Input.GetKeyDown("5")) { selectedplant = 4; }
+
         print(selectedplant);
         selected = inv[(int)selectedplant];
-        if ((int)selectedplant < inv.Count){ selectedplant = inv.Count - 1; }
+        
         selected.GetComponent<Image>().color = Color.red;
+        selectedparent = selected.GetComponent<Inventoryseed>().pr;
     }
 }
