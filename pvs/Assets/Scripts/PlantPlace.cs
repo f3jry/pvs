@@ -17,7 +17,7 @@ public class PlantPlace : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Placeplant(inv.);
+            Placeplant(inv.selected.GetComponent<Inventoryseed>().pr);
         }
     }
     public void Placeplant(PlantParent pr)

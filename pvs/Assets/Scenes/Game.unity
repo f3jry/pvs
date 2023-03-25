@@ -935,12 +935,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717543910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 462e5346a9fc4e140a500968804b1915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   kolo: 0
+  MaximumKoloMinutes: 0
+  RemainingTimeText: {fileID: 0}
 --- !u!4 &717543912
 Transform:
   m_ObjectHideFlags: 0
@@ -2182,6 +2184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plant: {fileID: 4012303176969726791, guid: dfe2d5b7639f64b4f9db96d8771ba5b1, type: 3}
   pr1: {fileID: 11400000, guid: 9e9becfa173bd7843824f8e5eb6a5016, type: 2}
+  inv: {fileID: 0}
   ocupiedtiles: []
 --- !u!4 &1685180203
 Transform:
@@ -2741,6 +2744,7 @@ MonoBehaviour:
   pr1: {fileID: 11400000, guid: bfbdda9fff027974e89024431f0330cf, type: 2}
   pr2: {fileID: 11400000, guid: 9e9becfa173bd7843824f8e5eb6a5016, type: 2}
   spawnobject: {fileID: 1242615290}
+  selected: {fileID: 0}
 --- !u!1 &1963876797
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class inventory : MonoBehaviour
 {
     public GameObject plantprefab;
@@ -9,8 +9,8 @@ public class inventory : MonoBehaviour
     public PlantParent pr1;
     public PlantParent pr2;
     public Transform spawnobject;
-    public PlantParent selected;
-    float selectedplant;
+    public GameObject selected;
+    float selectedplant = 0;
     void additem(PlantParent pr)
     {
         GameObject seeditem = Instantiate(plantprefab);
@@ -18,6 +18,7 @@ public class inventory : MonoBehaviour
         Inventoryseed invseed = seeditem.GetComponent<Inventoryseed>();
         invseed.seedimage.sprite = pr.FruitSprite;
         invseed.pr = pr;
+        inv.Add(invseed.gameObject);
     }
     private void Start()
     {
@@ -30,7 +31,8 @@ public class inventory : MonoBehaviour
     {
         selectedplant += Input.mouseScrollDelta.y * -1;
         print(selectedplant);
-        selected = inv[(inv)selectedplant];
-        selected.
+        selected = inv[(int)selectedplant];
+        if ((int)selectedplant < inv.Count){ selectedplant = inv.Count - 1; }
+        selected.GetComponent<Image>().color = Color.red;
     }
 }
