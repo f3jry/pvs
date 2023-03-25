@@ -11,6 +11,8 @@ public class PlantAbilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         foreach (AbilityBase item in currentAbilities)
         {
             item.CallAbility(true);
