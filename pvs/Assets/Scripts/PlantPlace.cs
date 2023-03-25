@@ -18,6 +18,7 @@ public class PlantPlace : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Placeplant(inv.selectedparent);
+            inv.deleteactive();
         }
     }
     public void Placeplant(PlantParent pr)

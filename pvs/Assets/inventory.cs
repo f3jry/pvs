@@ -46,4 +46,9 @@ public class inventory : MonoBehaviour
         selected.GetComponent<Image>().color = Color.red;
         selectedparent = selected.GetComponent<Inventoryseed>().pr;
     }
+    public void deleteactive()
+    {
+        Destroy(inv.ToArray()[selectedplant].gameObject);
+        inv.RemoveAt(selectedplant);
+    }
 }

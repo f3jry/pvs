@@ -15,6 +15,7 @@ public class plant : MonoBehaviour
     int growstage = 0;
     public Sprite growimage;
     public Sprite smallimage;
+    bool ismousein = false;
     // Update is called once per frame
     private void Start()
     {
@@ -29,10 +30,12 @@ public class plant : MonoBehaviour
     private void OnMouseEnter()
     {
         if (pop != null) { pop.Pop(pr.Name, pr.AbilityDescription, pr.FruitSprite); }
+        ismousein = true;
     }
     private void OnMouseExit()
     {
         if (pop != null) { pop.kytka.SetActive(false); }
+        ismousein = false;
     }
     private void Update()
     {
