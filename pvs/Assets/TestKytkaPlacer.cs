@@ -18,7 +18,25 @@ public class TestKytkaPlacer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-          gridSystem.PlaceFlower(pos, tempKytkaObject);
+            gridSystem.PlacePlant(pos, tempKytkaObject);
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            
+            List<GameObject> go = gridSystem.GetNeighbourPlants(pos, 2);
+
+            foreach (var item in go)
+            {
+                print(item.name);
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            gridSystem.RemovePlant(pos);
 
         }
     }
