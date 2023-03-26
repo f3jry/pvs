@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a80a7a85d4aaa43be1a9720bd16d06, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: 
-  FruitSprite: {fileID: 0}
+  FruitSprite: {fileID: 21300000, guid: 25fe5cf4b791908419f9e7366747119c, type: 3}
   Name: Carrot
   AbilityDescription: +2 Range
   AbilityName: +Range

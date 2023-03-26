@@ -22,7 +22,10 @@ public class PlantAbilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            AddAbility("Damage");
+        }
     }
 
     //assign from plant script
@@ -32,6 +35,7 @@ public class PlantAbilities : MonoBehaviour
         {
             if(item.abilityName == name)
             {
+
                 currentAbilities.Add(item);
             }
         }
