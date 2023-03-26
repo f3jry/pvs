@@ -24,6 +24,7 @@ public class KolaManager : MonoBehaviour
     {
         PlantManager.instance.updateplants();
         perlinSpawn.Spawn();
+        PlantManager.instance.BreedPlants();
         kolo ++;
         print(kolo);
         TimeRemaining = MaximumKoloMinutes * 60;
