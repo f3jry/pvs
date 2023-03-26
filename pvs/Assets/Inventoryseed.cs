@@ -10,7 +10,7 @@ public class Inventoryseed : MonoBehaviour
     public TMP_Text infotext;
     bool ismouse = false;
     public Image img;
-    float offset = 70;
+    //float offset = 70;
     private void OnMouseEnter()
     {
         ismouse = true;
@@ -24,11 +24,11 @@ public class Inventoryseed : MonoBehaviour
     {
         if (ismouse)
         {
-            img.transform.position = Vector2.Lerp(img.transform.position, new Vector2(0, 70), 1);
+            //img.transform.position = Vector2.Lerp(img.transform.position, new Vector2(0, 70), 1);
         }
         else
         {
-            img.transform.position = Vector2.Lerp(img.transform.position, new Vector2(0, 0), 1);
+            //img.transform.position = Vector2.Lerp(img.transform.position, new Vector2(0, 0), 1);
         }
     }
 }
