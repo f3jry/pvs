@@ -142,7 +142,6 @@ MonoBehaviour:
   growimage: {fileID: 21300000, guid: 752a80451ab8804499a4e780a19f7e40, type: 3}
   smallimage: {fileID: 21300000, guid: 3077901bcceb1c44eb3a52bd819d8e27, type: 3}
   range: 1
-  ability: 
 --- !u!61 &7476866610644112561
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,7 +149,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4012303176969726791}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -194,6 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1c6c3ab388f21409f14a1f846c9a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPlant: {fileID: 0}
   abilityName: 
   OnlyOnStart: 0
 --- !u!114 &4152346328098207084
@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4cf9dc158c76b47b8e5d412ca4e6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPlant: {fileID: 0}
   abilityName: 
   OnlyOnStart: 1
 --- !u!1 &4970893437516019450
