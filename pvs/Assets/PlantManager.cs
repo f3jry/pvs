@@ -21,6 +21,15 @@ public class PlantManager : MonoBehaviour
             g.grow();
         }
     }
+
+    public void CallPlantAbilities()
+    {
+        foreach (plant g in allPlants)
+        {
+            g.GetComponent<PlantAbilities>().CallEffects();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
