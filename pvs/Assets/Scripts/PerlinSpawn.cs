@@ -72,7 +72,6 @@ public class PerlinSpawn : MonoBehaviour
         {
             valueString += pair.ToString();
         }
-        print(valueString);
         return values;
         
     }
