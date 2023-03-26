@@ -4,14 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 public class inventory : MonoBehaviour
 {
+    public List<PlantParent> startitems;
+
     public GameObject plantprefab;
     public List<GameObject> inv;
-    public PlantParent pr1;
-    public PlantParent pr2;
+
+
     public Transform spawnobject;
-    public GameObject selected;
+    public Inventoryseed selected;
     int selectedplant = 0;
-    public PlantParent selectedparent;
+
+    public Animator vysunoutAnimator;
+
+    public Color colorCardSelected, colorCardDefault;
     public void additem(PlantParent pr)
     {
         GameObject seeditem = Instantiate(plantprefab);
@@ -24,10 +29,10 @@ public class inventory : MonoBehaviour
     }
     private void Start()
     {
-        additem(pr1);
-        additem(pr2);
-        additem(pr1);
-        additem(pr2);
+        foreach (var item in startitems)
+        {
+            additem(item);
+        }
     }
     private void Update()
     {
@@ -39,22 +44,40 @@ public class inventory : MonoBehaviour
         if (inv.Count > 0)
         {
 
-            selected = inv[(int)selectedplant];
+            selected = inv[(int)selectedplant].GetComponent<Inventoryseed>();
             foreach (GameObject item in inv)
             {
-                item.GetComponent<Image>().color = Color.black;
+                item.GetComponent<Inventoryseed>().background.color = colorCardDefault;
             }
-            selected.GetComponent<Image>().color = Color.red;
-            selectedparent = selected.GetComponent<Inventoryseed>().pr;
+            selected.background.color = colorCardSelected;
+
 
         }
 
+        if(Camera.main.ScreenToViewportPoint(Input.mousePosition).y < .15f)
+        {
+            print("showKarty");
+
+            vysunoutAnimator.SetBool("Vysunout", true);
+        }
+        else
+        {
+            vysunoutAnimator.SetBool("Vysunout", false);
+
+        }
+
+    }
+
+
+    private void OnMouseEnter()
+    {
+        print("entr");
     }
     public void deleteactive()
     {
         Destroy(inv.ToArray()[selectedplant].gameObject);
         inv.RemoveAt(selectedplant);
-        selectedparent = null;
+        selected.pr = null;
     }
 }
 

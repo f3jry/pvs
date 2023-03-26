@@ -10,6 +10,7 @@ public class Inventoryseed : MonoBehaviour
     public TMP_Text infotext;
     bool ismouse = false;
     public Image img;
+    public Image background;
     //float offset = 70;
     private void OnMouseEnter()
     {
