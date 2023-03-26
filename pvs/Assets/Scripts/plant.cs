@@ -16,11 +16,12 @@ public class plant : MonoBehaviour
     public Sprite growimage;
     public Sprite smallimage;
     public float range = 1;
-    public string ability;
+    GridSystem gs;
+    gridcursor gc;
     // Update is called once per frame
     private void Start()
     {
-        
+        gs = FindObjectOfType<GridSystem>();
         growstage = 0;
         pop = FindObjectOfType<KytkaPopUp>();
         km = FindObjectOfType<KolaManager>();
@@ -46,7 +47,7 @@ public class plant : MonoBehaviour
         if (growstage == 2) {
             vyrostla = true;
             ps.enabled = true;
-            ability = pr.AbilityName;
+            evolve();
 
         }
         else
@@ -55,10 +56,18 @@ public class plant : MonoBehaviour
         }
 
         if (growstage < 2) { growstage += 1; }
+        if(growstage == 2) { print(gs.GetNeighbourPlants(gc.currentGridTile.transform.position,1)); }
+
 
     }
-    public void takedamage()
+    public void takedamage(int damage)
     {
-        hp -= 1;
+        hp -= damage;
     }
+    public void evolve()
+    {
+        print("evolve  " + pr.AbilityName);
+        GetComponent<PlantAbilities>().AddAbility(pr.AbilityName);
+    }
+
 }

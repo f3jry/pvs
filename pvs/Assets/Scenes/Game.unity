@@ -2716,8 +2716,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantprefab: {fileID: 7060678407750764663, guid: eef99687e4b04c141a451cf52f429e6f, type: 3}
   inv: []
-  pr1: {fileID: 11400000, guid: bfbdda9fff027974e89024431f0330cf, type: 2}
-  pr2: {fileID: 11400000, guid: 9e9becfa173bd7843824f8e5eb6a5016, type: 2}
+  pr1: {fileID: 11400000, guid: 6540fb2ea01cd1f4095072ba4a0b0b9e, type: 2}
+  pr2: {fileID: 11400000, guid: 3a53b6f609a2bf24ca11d49c02145f5c, type: 2}
   spawnobject: {fileID: 1242615290}
   selected: {fileID: 0}
   selectedparent: {fileID: 0}

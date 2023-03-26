@@ -9,7 +9,7 @@ public class Inventoryseed : MonoBehaviour
     public PlantParent pr;
     public TMP_Text infotext;
     bool ismouse = false;
-    public Image img;
+    public GameObject img;
     float offset = 70;
     private void OnMouseEnter()
     {
