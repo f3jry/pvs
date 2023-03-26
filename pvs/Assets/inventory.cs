@@ -38,14 +38,18 @@ public class inventory : MonoBehaviour
         if (Input.GetKeyDown("5")) { selectedplant = 4; }
 
         print(selectedplant);
-        selected = inv[(int)selectedplant];
-        foreach (GameObject item in inv)
+        if (inv.Count > 0)
         {
-            item.GetComponent<Image>().color = Color.black;
-        }
-        selected.GetComponent<Image>().color = Color.red;
-        selectedparent = selected.GetComponent<Inventoryseed>().pr;
 
+            selected = inv[(int)selectedplant];
+            foreach (GameObject item in inv)
+            {
+                item.GetComponent<Image>().color = Color.black;
+            }
+            selected.GetComponent<Image>().color = Color.red;
+            selectedparent = selected.GetComponent<Inventoryseed>().pr;
+
+        }
 
     }
     public void deleteactive()
