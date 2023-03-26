@@ -9,5 +9,4 @@ public class PestParent : ScriptableObject
     public AbilityBase BaseAbility;
     public int Damage;
     public int HP;
-    //public int SpawnRate;
 }
