@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jablko : AbilityBase
+public class Potato : AbilityBase
 {
 
     private void Awake()
