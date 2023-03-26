@@ -31,8 +31,8 @@ public class inventory : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.mouseScrollDelta.y > 0) { selectedplant += 1; }
-        if (Input.mouseScrollDelta.y < 0) { selectedplant -= 1; }
+        if (Input.mouseScrollDelta.y < 0) { selectedplant += 1; }
+        if (Input.mouseScrollDelta.y > 0) { selectedplant -= 1; }
         if (selectedplant < 0) selectedplant = 0;
         if (selectedplant > inv.Count -1) selectedplant = inv.Count - 1;
         print(selectedplant);
