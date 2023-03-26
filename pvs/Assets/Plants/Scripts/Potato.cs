@@ -7,7 +7,7 @@ public class Potato : AbilityBase
 
     private void Awake()
     {
-        abilityName = "Heal";
+        abilityName = "+HP";
         thisPlant = GetComponent<plant>();
 
     }
@@ -18,8 +18,8 @@ public class Potato : AbilityBase
 
         foreach (GameObject item in neighbours)
         {
-            //item.GetComponent<plant>().takedamage(-);
-            //Heal will be here
+            item.GetComponent<plant>().takedamage(-1);
+
         }
 
     }

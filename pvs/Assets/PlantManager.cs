@@ -31,6 +31,32 @@ public class PlantManager : MonoBehaviour
         }
     }
 
+    public void CallAvilities()
+    {
+
+        foreach (plant g in allPlants)
+        {
+            g.gameObject.GetComponent<PlantAbilities>().CallEffects();
+
+
+
+        }
+    }
+
+    public void SpreadPests()
+    {
+
+        foreach (plant g in allPlants)
+        {
+            g.PestEffects();
+
+            g.SpreadPest();
+
+
+
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

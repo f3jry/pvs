@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 4152346328098207084}
   - component: {fileID: 745819628133722056}
   - component: {fileID: 6286375195081239885}
+  - component: {fileID: 5131084368935214672}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
@@ -139,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e0652ad9a36542aa372656d9c4582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  infectedWith: 
   pr: []
   pop: {fileID: 0}
   neighbours: []
@@ -248,6 +250,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73657c1221f4e72438fb814f3e97367f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisPlant: {fileID: 0}
+  abilityName: 
+  OnlyOnStart: 1
+--- !u!114 &5131084368935214672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012303176969726791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7012a3485e9d9584c8b61f582e0a1789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   thisPlant: {fileID: 0}

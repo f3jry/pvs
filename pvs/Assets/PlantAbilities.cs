@@ -29,6 +29,12 @@ public class PlantAbilities : MonoBehaviour
         {
             AddAbility("Damage");
         }
+
+        currentAbilities = new List<AbilityBase>();
+        foreach (var item in GetComponent<plant>().pr)
+        {
+            AddAbility(item.AbilityName);
+        }
     }
 
     //assign from plant script
