@@ -20,6 +20,8 @@ public class plant : MonoBehaviour
     gridcursor gc;
     inventory inv;
     int level = 0;
+    public Color col;
+    PlantParent extparent;
     // Update is called once per frame
     private void Start()
     {
@@ -62,7 +64,15 @@ public class plant : MonoBehaviour
         if (growstage < 2) { growstage += 1; }
         if(growstage == 2 && level == 0) {
             level = 1;
-            print(GridSystem.instance.GetNeighbourPlants(gc.currentGridTile.transform.position,1)); }
+            }
+        else if(growstage ==2 && level == 1)
+        {
+            if(GridSystem.instance.GetNeighbourPlants(gc.currentGridTile.transform.position, 1) != null)
+            {
+                level = 2;
+                extparent = GridSystem.instance.GetNeighbourPlants(gc.currentGridTile.transform.position, 1)[0]?.GetComponentInChildren<plant>().pr;
+            }
+        }
 
 
     }
@@ -72,8 +82,19 @@ public class plant : MonoBehaviour
     }
     public void evolve()
     {
-        print("evolve  " + pr.AbilityName);
-        GetComponent<PlantAbilities>().AddAbility(pr.AbilityName);
+        if (level == 0 | level == 1)
+        {
+            print("evolve  " + pr.AbilityName);
+            GetComponent<PlantAbilities>().AddAbility(pr.AbilityName);
+            plantsprite.color = col;
+        }
+        else if(level == 2 && extparent != null)
+        {
+            print("evolve  " + extparent.AbilityName);
+            GetComponent<PlantAbilities>().AddAbility(extparent.AbilityName);
+            plantsprite.color = col;
+            
+        }
     }
     public void harvest()
     {
