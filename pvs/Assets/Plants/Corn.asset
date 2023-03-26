@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a80a7a85d4aaa43be1a9720bd16d06, type: 3}
+  m_Name: Corn
+  m_EditorClassIdentifier: 
+  FruitSprite_LVL1_1: {fileID: 21300000, guid: 148f8a24bc3cea642bcd253ed5cd0d4b, type: 3}
+  FruitSprite_LVL_2_1: {fileID: 21300000, guid: a742ecb55bb2340498e15f68cdf58c25, type: 3}
+  FruitSprite_LVL_2_2: {fileID: 21300000, guid: 1171d6e300673514f9e7c362795cb65c, type: 3}
+  FruitSprite_LVL_3_1: {fileID: 21300000, guid: 8095dd5b538a7b942968c5ed544c5be5, type: 3}
+  FruitSprite_LVL_3_2: {fileID: 21300000, guid: 6e2a83e7e4c6c024b9f83307dc0f81f3, type: 3}
+  FruitSprite_LVL_3_3: {fileID: 21300000, guid: f3e6214e64c1ee5498c331b2c80442df, type: 3}
+  Name: Corn
+  AbilityDescription: damages random pest in range, 4 dmg, happens each turn
+  AbilityName: SharpShooter
+  PriceSell: 4
+  PriceBuy: 8

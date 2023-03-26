@@ -9,14 +9,14 @@ public class plant : MonoBehaviour
 
     public List<GameObject> neighbours;
 
-    int MaxHp = 6;
-    int hp = 6;
+    int hp;
     public float range = 1;
     int currentLevel = 0;
     PlantParent extparent;
 
     //3 not harvested, 2 NotHarvested+CannotBreed, 1 harvested waiting, 0 harvested
     public int harvestedLevel;
+
 
     KolaManager km;
     GridSystem gs;
@@ -41,14 +41,7 @@ public class plant : MonoBehaviour
  
     public void takedamage(int damage)
     {
-        if(hp - damage <= MaxHp)
-        {
-            hp -= damage;
-        }
-        else
-        {
-            hp = MaxHp;
-        }
+        hp -= damage;
     }
 
     public void grow()
@@ -107,6 +100,10 @@ public class plant : MonoBehaviour
 
     }
 
+    public void Takedamage(int amount)
+    {
+
+    }
 
     public void harvest(bool addToInv)
     {

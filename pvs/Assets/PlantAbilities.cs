@@ -8,6 +8,9 @@ public class PlantAbilities : MonoBehaviour
 
     public List<AbilityBase> currentAbilities = new List<AbilityBase>();
 
+    public int AbilityEffectMultiplier = 1;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +49,10 @@ public class PlantAbilities : MonoBehaviour
     {
         foreach (AbilityBase item in currentAbilities)
         {
-            item.CallAbility(false);
+            for (int i = 0; i < AbilityEffectMultiplier; i++)
+            {
+                item.CallAbility(false);
+            }
         }
     }
 
