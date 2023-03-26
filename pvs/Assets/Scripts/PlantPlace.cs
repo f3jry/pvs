@@ -30,7 +30,7 @@ public class PlantPlace : MonoBehaviour
         if (cursor?.currentGridTile?.transform.childCount < 2)
         {
             GameObject insPlant = Instantiate(plant, cursor.currentGridTile.transform);
-            insPlant.GetComponent<plant>().pr = pr;
+            insPlant.GetComponent<plant>().pr.Add(pr);
             inv.deleteactive();
 
         }

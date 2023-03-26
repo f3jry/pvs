@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a80a7a85d4aaa43be1a9720bd16d06, type: 3}
   m_Name: Potato
   m_EditorClassIdentifier: 
-  FruitSprite: {fileID: 21300000, guid: 826fc9f2bb7f52a469713c8420d1b0b1, type: 3}
+  FruitSprite_LVL1_1: {fileID: 21300000, guid: 2132b5f43499f2948ae9aac34c96bf40, type: 3}
+  FruitSprite_LVL_2_1: {fileID: 21300000, guid: 826fc9f2bb7f52a469713c8420d1b0b1, type: 3}
+  FruitSprite_LVL_2_2: {fileID: 21300000, guid: 58ad9c557c91f0e4c9072924b05d8012, type: 3}
+  FruitSprite_LVL_3_1: {fileID: 21300000, guid: 9f20a0255446ae04287000a314e6b907, type: 3}
+  FruitSprite_LVL_3_2: {fileID: 21300000, guid: c00a86ad22d4d5e4bbafd922357e5fb3, type: 3}
+  FruitSprite_LVL_3_3: {fileID: 21300000, guid: 359e1cd4b56850046ad753cc0ed177b1, type: 3}
   Name: Potato
   AbilityDescription: +1 HP
   AbilityName: +HP

@@ -22,6 +22,7 @@ public class KolaManager : MonoBehaviour
     public void dalsikolo() // pridej jedno kolo
     {
         PlantManager.instance.updateplants();
+        PlantManager.instance.BreedPlants();
         kolo ++;
         print(kolo);
         TimeRemaining = MaximumKoloMinutes * 60;

@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a80a7a85d4aaa43be1a9720bd16d06, type: 3}
   m_Name: Chilli Pepper
   m_EditorClassIdentifier: 
-  FruitSprite: {fileID: 21300000, guid: 73fd6a0af439b514cad1c686d3a3cdd7, type: 3}
+  FruitSprite_LVL1_1: {fileID: 21300000, guid: cd64889175e952741abc05f006cd5bf4, type: 3}
+  FruitSprite_LVL_2_1: {fileID: 21300000, guid: 0de311d26fc89334da9a3d6fc14c813d, type: 3}
+  FruitSprite_LVL_2_2: {fileID: 21300000, guid: 73fd6a0af439b514cad1c686d3a3cdd7, type: 3}
+  FruitSprite_LVL_3_1: {fileID: 21300000, guid: 0c65fa0ab59d11845b51d55668d356e5, type: 3}
+  FruitSprite_LVL_3_2: {fileID: 21300000, guid: 2f6fb6711fcfc094db2f2e75247ba58d, type: 3}
+  FruitSprite_LVL_3_3: {fileID: 21300000, guid: dd95211c48264d541992a163cbca1da7, type: 3}
   Name: Chilli Pepper
   AbilityDescription: Damage to each square in range
   AbilityName: Damage

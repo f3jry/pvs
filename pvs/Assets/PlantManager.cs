@@ -21,6 +21,16 @@ public class PlantManager : MonoBehaviour
             g.grow();
         }
     }
+
+
+    public void BreedPlants()
+    {
+        foreach (plant g in allPlants)
+        {
+            g.Breed();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
