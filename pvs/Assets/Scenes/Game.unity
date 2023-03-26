@@ -944,6 +944,7 @@ MonoBehaviour:
   kolo: 0
   MaximumKoloMinutes: 1
   RemainingTimeText: {fileID: 2064241680}
+  inv: {fileID: 0}
 --- !u!4 &717543912
 Transform:
   m_ObjectHideFlags: 0
@@ -1141,6 +1142,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGridTile: {fileID: 0}
   pop: {fileID: 1916740523}
+  sr: {fileID: 1366352034}
+  col1: {r: 0, g: 0, b: 0, a: 0}
+  col2: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &857882587
 Transform:
   m_ObjectHideFlags: 0
@@ -3072,6 +3076,7 @@ MonoBehaviour:
   vysunoutAnimator: {fileID: 1242615292}
   colorCardSelected: {r: 0.9339623, g: 0.4801976, b: 0.4801976, a: 1}
   colorCardDefault: {r: 1, g: 1, b: 1, a: 1}
+  parents: []
 --- !u!1 &1963876797
 GameObject:
   m_ObjectHideFlags: 0

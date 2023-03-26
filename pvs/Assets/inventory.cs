@@ -24,7 +24,7 @@ public class inventory : MonoBehaviour
         GameObject seeditem = Instantiate(plantprefab);
         seeditem.transform.parent = spawnobject;
         Inventoryseed invseed = seeditem.GetComponent<Inventoryseed>();
-        //invseed.seedimage.sprite = pr.FruitSprite;
+        invseed.seedimage.sprite = pr.FruitSprite_LVL_2_2;
         invseed.pr = pr;
         inv.Add(invseed.gameObject);
         invseed.infotext.text = pr.Name;
