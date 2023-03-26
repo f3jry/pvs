@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GridSystem : MonoBehaviour
 {
-
+    public static GridSystem instance;
     public GameObject GridTile;
 
     public Vector2Int gridsize;
@@ -16,6 +16,8 @@ public class GridSystem : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        instance = this;
+
         CreateGrid(gridsize);
         centerGrid();
     }
@@ -83,6 +85,20 @@ public class GridSystem : MonoBehaviour
         plant.transform.localPosition = new Vector3(0, 0, 0);
 
     }*/
+
+    public bool IsPlantAt(Vector2 pos)
+    {
+        Transform tileT = GetTile(pos).transform;
+
+        if (tileT.transform.childCount > 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
 
     public void RemovePlant(Vector2 pos)

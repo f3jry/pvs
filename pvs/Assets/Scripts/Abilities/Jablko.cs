@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChilliPepper : AbilityBase
+public class Jablko : AbilityBase
 {
+
     private void Awake()
     {
-        abilityName = "Damage";
+        abilityName = "Heal";
         thisPlant = GetComponent<plant>();
 
     }
-
 
     public override void CallAbility(bool start)
     {
@@ -18,7 +18,8 @@ public class ChilliPepper : AbilityBase
 
         foreach (GameObject item in neighbours)
         {
-            item.GetComponent<plant>().takedamage(); 
+            //Heal        
         }
+
     }
 }
