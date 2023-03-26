@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class plant : MonoBehaviour
 {
+
+    public string infectedWith = "";
+
     public List<PlantParent> pr = new List<PlantParent>();
     public KytkaPopUp pop;
 
@@ -36,7 +39,10 @@ public class plant : MonoBehaviour
     {
         PlantManager.instance.allPlants.Add(this);
         currentLevel = 0;
-        GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, "WIP", hp, pr);
+        hp = 6;
+
+
+        GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, infectedWith, hp, pr);
     }
  
     public void takedamage(int damage)
@@ -54,7 +60,10 @@ public class plant : MonoBehaviour
             harvestedLevel += 1;
         }
 
-        GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, "WIP", hp, pr, (harvestedLevel < 2));
+        GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, infectedWith, hp, pr, (harvestedLevel < 2));
+
+
+
 
 
 
@@ -62,7 +71,6 @@ public class plant : MonoBehaviour
         {
             currentLevel += 1;
         }
-
 
 
 
@@ -75,8 +83,9 @@ public class plant : MonoBehaviour
         currentLevel += 1;
         print(transform.parent.name + "  " + to.AbilityName);
 
+
         pr.Add(to);
-        GetComponent<PlantVisualManager>().UpdateSprites(currentLevel,"WIP", hp, pr);
+        GetComponent<PlantVisualManager>().UpdateSprites(currentLevel,infectedWith, hp, pr);
 
         
     }
@@ -120,7 +129,7 @@ public class plant : MonoBehaviour
 
         if (currentLevel > 1 && harvestedLevel >= 2)
         {
-            GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, "WIP", hp, pr, true);
+            GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, infectedWith, hp, pr, true);
             harvestedLevel = 0;
 
             if (addToInv)
@@ -133,4 +142,35 @@ public class plant : MonoBehaviour
         }
     }
 
+
+
+    public void InfectWithPest(string type)
+    {
+        infectedWith = type;
+
+        GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, infectedWith, hp, pr, harvestedLevel < 2);
+
+    }
+
+    public void PestEffects()
+    {
+        if (infectedWith != "")
+        {
+            print("tejkDemid");
+            takedamage(2);
+
+            GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, infectedWith, hp, pr, harvestedLevel < 2);
+        }
+    }
+
+    public void SpreadPest()
+    {
+        neighbours = GridSystem.instance.GetNeighbourPlants(GridSystem.instance.NameToVector(transform.parent.name), 2);
+        neighbours.Remove(this.gameObject);
+
+        if (neighbours.Count > 0)
+        {
+            neighbours[Random.Range(0, neighbours.Count)].GetComponent<plant>().InfectWithPest(infectedWith);
+        }
+    }
 }

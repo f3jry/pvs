@@ -23,15 +23,71 @@ public class KolaManager : MonoBehaviour
     }
     public void dalsikolo() // pridej jedno kolo
     {
+        Dictionary<string, int> Spawn = perlinSpawn.Spawn();
+
+
         PlantManager.instance.updateplants();
-        perlinSpawn.Spawn();
         PlantManager.instance.BreedPlants();
-        kolo ++;
+        PlantManager.instance.CallAvilities();
+        PlantManager.instance.SpreadPests();
+
+
+        kolo++;
+        print(kolo);
         TimeRemaining = MaximumKoloMinutes * 60;
         inv.additemrandom();
 
         Debug.Log(perlinSpawn.Spawn().Values);
+
+
+
+
+        for (int i = 0; i < Spawn["Aphid"]; i++)
+        {
+            for (int t = 0; t < 200; t++)
+            {
+                int r = Random.Range(0, PlantManager.instance.allPlants.Count);
+
+                if (PlantManager.instance.allPlants[r].infectedWith != "") continue;
+                
+                PlantManager.instance.allPlants[r].InfectWithPest("Aphid");
+
+                break;
+            }
+        }
+
+        for (int i = 0; i < Spawn["Snail"]; i++)
+        {
+            for (int t = 0; t < 200; t++)
+            {
+                int r = Random.Range(0, PlantManager.instance.allPlants.Count);
+
+                if (PlantManager.instance.allPlants[r].infectedWith != "") continue;
+
+                PlantManager.instance.allPlants[r].InfectWithPest("Snail");
+
+                break;
+            }
+        }
+
+        for (int i = 0; i < Spawn["Caterpillar"]; i++)
+        {
+            for (int t = 0; t < 200; t++)
+            {
+                int r = Random.Range(0, PlantManager.instance.allPlants.Count);
+
+                if (PlantManager.instance.allPlants[r].infectedWith != "") continue;
+
+                PlantManager.instance.allPlants[r].InfectWithPest("Caterpillar");
+
+                break;
+            }
+        }
+
     }
+
+
+     
     private void Update()
     {
         if (TimeRemaining > 0)

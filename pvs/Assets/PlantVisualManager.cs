@@ -19,6 +19,7 @@ public class PlantVisualManager : MonoBehaviour
 
     public void UpdateSprites(int level, string pest, int health, List<PlantParent> pr, bool harvested = false)
     {
+        print(pest);
         if (level > 1)
         {
             if (level > 2)
@@ -98,6 +99,20 @@ public class PlantVisualManager : MonoBehaviour
                 else
                 {
                     Plod1S.sprite = null;
+                }
+
+                if (health >= 6)
+                {
+                    Stonek.sprite = StonekG_small;
+
+                }
+                else if (health > 1)
+                {
+                    Stonek.sprite = StonekY_small;
+                }
+                else
+                {
+                    Stonek.sprite = StonekB_small;
                 }
 
                 if (pest == "Aphid") { pestRenderer.sprite = Aphid_middle; }
