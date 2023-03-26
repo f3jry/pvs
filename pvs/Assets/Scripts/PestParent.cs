@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Pest", menuName = "Pest")]
 public class PestParent : ScriptableObject
 {
-    public Sprite Sprite;
+    public Sprite[] BugStages;
     public string Name;
     public string AbilityDescription;
     public AbilityBase BaseAbility;
