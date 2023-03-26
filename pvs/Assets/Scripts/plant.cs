@@ -10,7 +10,7 @@ public class plant : MonoBehaviour
     public SpriteRenderer ps;
     public SpriteRenderer plantsprite;
     KolaManager km;
-    int hp;
+    public int hp = 3;
     bool vyrostla = false;
     int growstage = 0;
     public Sprite growimage;
@@ -22,6 +22,7 @@ public class plant : MonoBehaviour
     int level = 0;
     public Color col;
     PlantParent extparent;
+    public GameObject hromada;
     // Update is called once per frame
     private void Start()
     {
@@ -107,6 +108,10 @@ public class plant : MonoBehaviour
             ps.enabled = false;
             inv.additem(pr);
         }
+    }
+    private void Update()
+    {
+        if(hp <= 0){ GameObject d = Instantiate(hromada); d.transform.position = transform.position;Destroy(gameObject); }
     }
 
 }
