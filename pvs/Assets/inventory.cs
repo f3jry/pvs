@@ -56,10 +56,6 @@ public class inventory : MonoBehaviour
         inv.RemoveAt(selectedplant);
         selectedparent = null;
     }
-    public void deleteactive()
-    {
-        Destroy(inv.ToArray()[selectedplant].gameObject);
-        inv.RemoveAt(selectedplant);
-    }
+    
 }
 
