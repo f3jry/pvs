@@ -79,5 +79,6 @@ public class inventory : MonoBehaviour
         inv.RemoveAt(selectedplant);
         selected.pr = null;
     }
+    
 }
 
