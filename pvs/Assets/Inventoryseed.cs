@@ -9,8 +9,8 @@ public class Inventoryseed : MonoBehaviour
     public PlantParent pr;
     public TMP_Text infotext;
     bool ismouse = false;
-    public GameObject img;
-    float offset = 70;
+    public Image img;
+    //float offset = 70;
     private void OnMouseEnter()
     {
         ismouse = true;
@@ -28,7 +28,7 @@ public class Inventoryseed : MonoBehaviour
         }
         else
         {
-            // img.transform.position = Vector2.Lerp(img.transform.position, new Vector2(0, 0), 1);
+            //img.transform.position = Vector2.Lerp(img.transform.position, new Vector2(0, 0), 1);
         }
     }
 }
