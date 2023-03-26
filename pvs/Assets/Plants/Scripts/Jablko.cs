@@ -18,7 +18,8 @@ public class Jablko : AbilityBase
 
         foreach (GameObject item in neighbours)
         {
-            //Heal        
+            //item.GetComponent<plant>().takedamage(-);
+            //Heal will be here
         }
 
     }

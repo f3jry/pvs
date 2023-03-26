@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class AbilityBase : MonoBehaviour
 {
-    public plant thisPlant;
+    [HideInInspector] public plant thisPlant;
 
-    public string abilityName;
+    [HideInInspector] public string abilityName;
     public bool OnlyOnStart;
     int range;
 
