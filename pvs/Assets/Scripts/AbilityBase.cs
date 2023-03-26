@@ -16,9 +16,6 @@ public class AbilityBase : MonoBehaviour
     {
         if (OnlyOnStart != start) return;
 
-        print(GetComponent<plant>().pr.AbilityName + " ability was called");
-
-
     }
 
 

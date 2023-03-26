@@ -168,12 +168,4 @@ public class GridSystem : MonoBehaviour
         return null;
 
     }
-
-    public Vector2 NamePosToVector(string name)
-    {
-        int sx = int.Parse(name.Split(' ')[0]);
-        int sy = int.Parse(name.Split(' ')[1]);
-
-        return new Vector2(sx, sy);
-    }
 }

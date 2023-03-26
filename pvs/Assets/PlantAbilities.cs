@@ -13,7 +13,10 @@ public class PlantAbilities : MonoBehaviour
     {
 
 
-
+        foreach (AbilityBase item in currentAbilities)
+        {
+            item.CallAbility(true);
+        }
     }
 
     // Update is called once per frame
@@ -35,11 +38,6 @@ public class PlantAbilities : MonoBehaviour
 
                 currentAbilities.Add(item);
             }
-        }
-
-        foreach (AbilityBase item in currentAbilities)
-        {
-            item.CallAbility(true);
         }
     }
 

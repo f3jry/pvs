@@ -14,10 +14,6 @@ public class Mrkev : AbilityBase
 
     public override void CallAbility(bool start)
     {
-        base.CallAbility(start);
-        if (OnlyOnStart != start) return;
-
-
         thisPlant.range += 1;
 
     }

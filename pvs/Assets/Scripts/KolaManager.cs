@@ -22,7 +22,6 @@ public class KolaManager : MonoBehaviour
     public void dalsikolo() // pridej jedno kolo
     {
         PlantManager.instance.updateplants();
-        PlantManager.instance.CallPlantAbilities();
         kolo ++;
         print(kolo);
         TimeRemaining = MaximumKoloMinutes * 60;
@@ -50,7 +49,6 @@ public class KolaManager : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         RemainingTimeText.text = "Time Remaining: " + string.Format("{0:00}:{1:00}", minutes, seconds);
     }
-
 
 
 }
