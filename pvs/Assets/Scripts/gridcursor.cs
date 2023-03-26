@@ -26,14 +26,15 @@ public class gridcursor : MonoBehaviour
         else
         {
             sr.color = col2;
+            currentGridTile = null;
         }
         if(Input.GetMouseButton(1))
         {
             currentGridTile?.GetComponentInChildren<plant>()?.harvest(true);
         }
 
-        /*
-        PlantParent f = currentGridTile.GetComponentInChildren<plant>().pr;
+        
+        /*PlantParent f = currentGridTile.GetComponentInChildren<plant>().pr;
 
         print(f);
         pop.Pop(f.Name, f.AbilityDescription, f.FruitSprite);*/

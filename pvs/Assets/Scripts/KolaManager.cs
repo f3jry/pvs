@@ -16,6 +16,8 @@ public class KolaManager : MonoBehaviour
     int minutes;
     public inventory inv;
 
+    int kols;
+    public int howmuchkols = 2;
     private void Awake()
     {
         KolaManagerInstance = this;
@@ -29,7 +31,12 @@ public class KolaManager : MonoBehaviour
         kolo ++;
         print(kolo);
         TimeRemaining = MaximumKoloMinutes * 60;
-        inv.additemrandom();
+        kols += 1;
+        if (kols > howmuchkols)
+        {
+            inv.additemrandom();
+            kols = 0;
+        }
     }
     private void Update()
     {

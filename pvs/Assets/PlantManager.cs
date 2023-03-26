@@ -8,7 +8,7 @@ public class PlantManager : MonoBehaviour
 
 
     public List<plant> allPlants;
-
+    public bool did;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +19,15 @@ public class PlantManager : MonoBehaviour
         foreach (plant g in allPlants)
         {
             g.grow();
+        }
+        if(allPlants.Count > 0)
+        {
+            did = true;
+        }
+        if(allPlants.Count < 1)
+        {
+            Application.Quit();
+            
         }
     }
 
