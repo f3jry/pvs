@@ -1540,8 +1540,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1242615290}
   - component: {fileID: 1242615291}
+  - component: {fileID: 1242615292}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Content
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1562,11 +1563,11 @@ RectTransform:
   m_Father: {fileID: 1924468596}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 701, y: 140}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1242615291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1584,15 +1585,35 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 7
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!95 &1242615292
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242615289}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f65ae8d9d9c321e48a3ffde736a44552, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1262924078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2660,11 +2681,11 @@ RectTransform:
   m_Father: {fileID: 1262924082}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 70}
-  m_SizeDelta: {x: -400, y: 140}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 648, y: 58.0285}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1924468597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2678,7 +2699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2715,13 +2736,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b564093af5dc953499d0cf2b98c2dc34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startitems:
+  - {fileID: 11400000, guid: 3ad0aec03d5100f4b8e4df87652910c2, type: 2}
+  - {fileID: 11400000, guid: cd8365a303c056d4a839602c838251e2, type: 2}
+  - {fileID: 11400000, guid: 3a53b6f609a2bf24ca11d49c02145f5c, type: 2}
   plantprefab: {fileID: 7060678407750764663, guid: eef99687e4b04c141a451cf52f429e6f, type: 3}
   inv: []
-  pr1: {fileID: 11400000, guid: 6540fb2ea01cd1f4095072ba4a0b0b9e, type: 2}
-  pr2: {fileID: 11400000, guid: 3a53b6f609a2bf24ca11d49c02145f5c, type: 2}
   spawnobject: {fileID: 1242615290}
   selected: {fileID: 0}
-  selectedparent: {fileID: 0}
+  vysunoutAnimator: {fileID: 1242615292}
+  colorCardSelected: {r: 0.9339623, g: 0.4801976, b: 0.4801976, a: 1}
+  colorCardDefault: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
 --- !u!1 &1963876797
 GameObject:
   m_ObjectHideFlags: 0
