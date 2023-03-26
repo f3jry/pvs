@@ -86,6 +86,20 @@ public class GridSystem : MonoBehaviour
 
     }*/
 
+    public bool IsPlantAt(Vector2 pos)
+    {
+        Transform tileT = GetTile(pos).transform;
+
+        if (tileT.transform.childCount > 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
     public void RemovePlant(Vector2 pos)
     {
