@@ -8,8 +8,8 @@ public class plant : MonoBehaviour
     public KytkaPopUp pop;
 
     public List<GameObject> neighbours;
-
-    int hp;
+    int maxHp = 6;
+    int hp = 6;
     public float range = 1;
     int currentLevel = 0;
     PlantParent extparent;
@@ -41,7 +41,10 @@ public class plant : MonoBehaviour
  
     public void takedamage(int damage)
     {
-        hp -= damage;
+        if(hp - damage <= maxHp)
+        {
+            hp -= damage;
+        }
     }
 
     public void grow()
@@ -100,10 +103,7 @@ public class plant : MonoBehaviour
 
     }
 
-    public void Takedamage(int amount)
-    {
-
-    }
+    
 
     public void harvest(bool addToInv)
     {
