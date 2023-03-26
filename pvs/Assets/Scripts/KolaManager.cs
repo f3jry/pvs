@@ -21,6 +21,7 @@ public class KolaManager : MonoBehaviour
     }
     public void dalsikolo() // pridej jedno kolo
     {
+        PlantManager.instance.updateplants();
         kolo ++;
         print(kolo);
         TimeRemaining = MaximumKoloMinutes * 60;

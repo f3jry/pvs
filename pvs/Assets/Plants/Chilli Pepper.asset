@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a80a7a85d4aaa43be1a9720bd16d06, type: 3}
   m_Name: Chilli Pepper
   m_EditorClassIdentifier: 
-  FruitSprite: {fileID: 0}
+  FruitSprite: {fileID: 21300000, guid: 73fd6a0af439b514cad1c686d3a3cdd7, type: 3}
   Name: Chilli Pepper
-  AbilityDescription: (1) Damage to each square in range
-  BaseAbility: {fileID: 0}
-  PriceSell: 0
-  PriceBuy: 0
+  AbilityDescription: Damage to each square in range
+  AbilityName: Damage
+  PriceSell: 3
+  PriceBuy: 5

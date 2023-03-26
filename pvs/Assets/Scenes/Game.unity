@@ -189,7 +189,7 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &123817203
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 543562b8d533091439dfd11f4bc396b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 752a80451ab8804499a4e780a19f7e40, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -922,6 +922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717543912}
   - component: {fileID: 717543911}
+  - component: {fileID: 717543913}
   m_Layer: 0
   m_Name: Kolamanager
   m_TagString: Untagged
@@ -959,6 +960,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &717543913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717543910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059f203b0aa05eb46ae9e13fd2e51a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allPlants: []
 --- !u!1 &829973840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d6b7707d68ac44db00f65e9edb03bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentGridTile: {fileID: 0}
+  pop: {fileID: 1916740523}
 --- !u!4 &857882587
 Transform:
   m_ObjectHideFlags: 0
@@ -1572,10 +1588,10 @@ MonoBehaviour:
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!1 &1262924078
 GameObject:
@@ -2141,6 +2157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e65cc0934bc57418c1aa71bf8ef496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursor: {fileID: 857882585}
   plant: {fileID: 4012303176969726791, guid: dfe2d5b7639f64b4f9db96d8771ba5b1, type: 3}
   pr1: {fileID: 11400000, guid: 9e9becfa173bd7843824f8e5eb6a5016, type: 2}
   inv: {fileID: 1924468599}
@@ -2700,8 +2717,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantprefab: {fileID: 7060678407750764663, guid: eef99687e4b04c141a451cf52f429e6f, type: 3}
   inv: []
-  pr1: {fileID: 11400000, guid: bfbdda9fff027974e89024431f0330cf, type: 2}
-  pr2: {fileID: 11400000, guid: 9e9becfa173bd7843824f8e5eb6a5016, type: 2}
+  pr1: {fileID: 11400000, guid: 6540fb2ea01cd1f4095072ba4a0b0b9e, type: 2}
+  pr2: {fileID: 11400000, guid: 3a53b6f609a2bf24ca11d49c02145f5c, type: 2}
   spawnobject: {fileID: 1242615290}
   selected: {fileID: 0}
   selectedparent: {fileID: 0}

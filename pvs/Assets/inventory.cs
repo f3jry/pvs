@@ -12,7 +12,7 @@ public class inventory : MonoBehaviour
     public GameObject selected;
     int selectedplant = 0;
     public PlantParent selectedparent;
-    void additem(PlantParent pr)
+    public void additem(PlantParent pr)
     {
         GameObject seeditem = Instantiate(plantprefab);
         seeditem.transform.parent = spawnobject;
@@ -31,20 +31,30 @@ public class inventory : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown("1")) { selectedplant = 0; }
-        if (Input.GetKeyDown("2")) { selectedplant = 1; }
-        if (Input.GetKeyDown("3")) { selectedplant = 2; }
-        if (Input.GetKeyDown("4")) { selectedplant = 3; }
-        if (Input.GetKeyDown("5")) { selectedplant = 4; }
-
+        if (Input.mouseScrollDelta.y < 0) { selectedplant += 1; }
+        if (Input.mouseScrollDelta.y > 0) { selectedplant -= 1; }
+        if (selectedplant < 0) selectedplant = 0;
+        if (selectedplant > inv.Count -1) selectedplant = inv.Count - 1;
         print(selectedplant);
-        selected = inv[(int)selectedplant];
-        foreach (GameObject item in inv)
+        if (inv.Count > 0)
         {
-            item.GetComponent<Image>().color = Color.black;
+
+            selected = inv[(int)selectedplant];
+            foreach (GameObject item in inv)
+            {
+                item.GetComponent<Image>().color = Color.black;
+            }
+            selected.GetComponent<Image>().color = Color.red;
+            selectedparent = selected.GetComponent<Inventoryseed>().pr;
+
         }
-        selected.GetComponent<Image>().color = Color.red;
-        selectedparent = selected.GetComponent<Inventoryseed>().pr;
+
+    }
+    public void deleteactive()
+    {
+        Destroy(inv.ToArray()[selectedplant].gameObject);
+        inv.RemoveAt(selectedplant);
+        selectedparent = null;
     }
     public void deleteactive()
     {
@@ -52,3 +62,4 @@ public class inventory : MonoBehaviour
         inv.RemoveAt(selectedplant);
     }
 }
+

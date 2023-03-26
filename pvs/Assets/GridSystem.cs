@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 
 public class GridSystem : MonoBehaviour
 {
+    public static GridSystem instance;
     public GameObject GridTile;
 
     public Vector2Int gridsize;
@@ -16,6 +16,8 @@ public class GridSystem : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        instance = this;
+
         CreateGrid(gridsize);
         centerGrid();
     }
@@ -29,8 +31,9 @@ public class GridSystem : MonoBehaviour
         {
             GridTiles[i] = transform.GetChild(0).GetChild(i);
         }
-
     }
+
+
 
 
     public void CreateGrid(Vector2 size)
@@ -59,11 +62,44 @@ public class GridSystem : MonoBehaviour
 
     }
 
-    public void PlacePlant(Vector2 pos, /*temp replace with flower class*/ GameObject flowerObject)
+    public void PlacePlant(Vector2 pos, /*temp replace with flower class*/ GameObject PlantObject)
     {
-        GameObject plant = Instantiate(flowerObject, GetTile(pos).transform);
+        GameObject plant = Instantiate(PlantObject, GetTile(pos).transform);
         plant.transform.localPosition = new Vector3(0, 0, 0);
+        
     }
+
+
+    /*
+    public void PlacePlantToPointer(GameObject PlantObject)
+    {
+
+
+
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+       
+        GameObject plant = Instantiate(PlantObject, GetTile(PlacePos).transform);
+
+        print(Mathf.Round(mousePos.x) + "  " + Mathf.Round(mousePos.y));
+
+        plant.transform.localPosition = new Vector3(0, 0, 0);
+
+    }*/
+
+    public bool IsPlantAt(Vector2 pos)
+    {
+        Transform tileT = GetTile(pos).transform;
+
+        if (tileT.transform.childCount > 1)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
     public void RemovePlant(Vector2 pos)
     {
