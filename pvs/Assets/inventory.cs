@@ -17,6 +17,8 @@ public class inventory : MonoBehaviour
     public Animator vysunoutAnimator;
 
     public Color colorCardSelected, colorCardDefault;
+
+    public PlantParent[] parents;
     public void additem(PlantParent pr)
     {
         GameObject seeditem = Instantiate(plantprefab);
@@ -26,6 +28,10 @@ public class inventory : MonoBehaviour
         invseed.pr = pr;
         inv.Add(invseed.gameObject);
         invseed.infotext.text = pr.Name;
+    }
+    public void additemrandom()
+    {
+        additem(parents[Random.Range(0, 4)]);
     }
     private void Start()
     {

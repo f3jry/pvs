@@ -13,6 +13,7 @@ public class KolaManager : MonoBehaviour
     public TMP_Text RemainingTimeText;
     int seconds;
     int minutes;
+    public inventory inv;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class KolaManager : MonoBehaviour
         kolo ++;
         print(kolo);
         TimeRemaining = MaximumKoloMinutes * 60;
+        inv.additemrandom();
     }
     private void Update()
     {

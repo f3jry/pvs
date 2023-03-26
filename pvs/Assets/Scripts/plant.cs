@@ -70,7 +70,7 @@ public class plant : MonoBehaviour
             if(GridSystem.instance.GetNeighbourPlants(gc.currentGridTile.transform.position, 1) != null)
             {
                 level = 2;
-                extparent = GridSystem.instance.GetNeighbourPlants(gc.currentGridTile.transform.position, 1)[0]?.GetComponentInChildren<plant>().pr;
+                extparent = GridSystem.instance.GetNeighbourPlants(gc.currentGridTile.transform.position, 1)[0].GetComponentInChildren<plant>().pr;
             }
         }
 
