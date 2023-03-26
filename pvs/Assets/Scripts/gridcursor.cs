@@ -6,7 +6,8 @@ public class gridcursor : MonoBehaviour
 {
     Vector2 lastpos;
     public GameObject currentGridTile;
-    
+    public KytkaPopUp pop;
+
     void Update()
     {
 
@@ -23,6 +24,9 @@ public class gridcursor : MonoBehaviour
         {
             currentGridTile.GetComponentInChildren<plant>().harvest();
         }
+        PlantParent f = GetComponentInChildren<plant>().pr;
+        print(f);
+        pop.Pop(f.Name, f.AbilityDescription, f.FruitSprite);
     }
 
 

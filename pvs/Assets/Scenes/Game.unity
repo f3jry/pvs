@@ -1125,6 +1125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentGridTile: {fileID: 0}
+  pop: {fileID: 1916740523}
 --- !u!4 &857882587
 Transform:
   m_ObjectHideFlags: 0
