@@ -27,7 +27,6 @@ public class KolaManager : MonoBehaviour
         perlinSpawn.Spawn();
         PlantManager.instance.BreedPlants();
         kolo ++;
-        print(kolo);
         TimeRemaining = MaximumKoloMinutes * 60;
         inv.additemrandom();
 

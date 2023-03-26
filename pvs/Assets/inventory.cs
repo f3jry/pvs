@@ -31,7 +31,7 @@ public class inventory : MonoBehaviour
     }
     public void additemrandom()
     {
-        additem(parents[Random.Range(0, 4)]);
+        additem(parents[Random.Range(0, 3)]);
     }
     private void Start()
     {
@@ -61,7 +61,6 @@ public class inventory : MonoBehaviour
 
         if(Camera.main.ScreenToViewportPoint(Input.mousePosition).y < .15f)
         {
-            print("showKarty");
 
             vysunoutAnimator.SetBool("Vysunout", true);
         }

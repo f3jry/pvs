@@ -11,7 +11,7 @@ public class plant : MonoBehaviour
     int maxHp = 6;
     int hp = 6;
     public float range = 1;
-    int currentLevel = 0;
+    public int currentLevel = 0;
     PlantParent extparent;
 
     //3 not harvested, 2 NotHarvested+CannotBreed, 1 harvested waiting, 0 harvested
@@ -70,7 +70,7 @@ public class plant : MonoBehaviour
 
     public void evolve(PlantParent to)
     {
-        if (currentLevel >= 3) return;
+        if (currentLevel >= 4) return;
 
         currentLevel += 1;
         print(transform.parent.name + "  " + to.AbilityName);
@@ -83,15 +83,25 @@ public class plant : MonoBehaviour
 
     public void Breed()
     {
-
+        Debug.Log("tst");
         if (currentLevel == 2 && harvestedLevel == 3)
         {
             neighbours = GridSystem.instance.GetNeighbourPlants(GridSystem.instance.NameToVector(transform.parent.name), 2);
             neighbours.Remove(this.gameObject);
 
-            if (neighbours.Count > 0)
+            List<GameObject> UsableNeighbour = new List<GameObject>();
+            foreach (GameObject neighbour in neighbours)
             {
-                neighbours[Random.Range(0, neighbours.Count)].GetComponent<plant>().evolve(pr[0]);
+                if (neighbour.gameObject.GetComponent<plant>().currentLevel == 2 || neighbour.gameObject.GetComponent<plant>().currentLevel == 3)
+                {
+                    
+                    UsableNeighbour.Add(neighbour);
+                }
+            }
+            if(UsableNeighbour.Count>=1) { Debug.Log(UsableNeighbour.Count); }
+            if (UsableNeighbour.Count > 0)
+            {
+                UsableNeighbour[Random.Range(0, neighbours.Count)].GetComponent<plant>().evolve(pr[0]);
 
                
 
