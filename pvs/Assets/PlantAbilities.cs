@@ -34,13 +34,11 @@ public class PlantAbilities : MonoBehaviour
             {
 
                 currentAbilities.Add(item);
+                item.CallAbility(true);
+
             }
         }
 
-        foreach (AbilityBase item in currentAbilities)
-        {
-            item.CallAbility(true);
-        }
     }
 
     //Call every round - stage 2
