@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sprite: {fileID: 0}
   Name: Snail
-  AbilityDescription: 
+  AbilityDescription: Immune to Chilli Pepper damage
   BaseAbility: {fileID: 0}
   Damage: 1
   HP: 10
+  SpawnRate: 10

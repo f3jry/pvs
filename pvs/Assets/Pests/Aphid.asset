@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4fefe69197ac047b6c67ec2338a90d, type: 3}
   m_Name: Aphid
   m_EditorClassIdentifier: 
-  Sprite: {fileID: 0}
+  Sprite: {fileID: 21300000, guid: eb06b2f6fb3bcee4b9f2ed7de5afdd23, type: 3}
   Name: Aphid
   AbilityDescription: 
   BaseAbility: {fileID: 0}
   Damage: 2
   HP: 4
+  SpawnRate: 2
