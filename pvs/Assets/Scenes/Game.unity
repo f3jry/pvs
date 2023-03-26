@@ -985,7 +985,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc2535e1c93b3a4286bc76b3b199f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pestTypes: []
+  pestTypes:
+  - {fileID: 11400000, guid: 9aaed96d289e7c446b7cb14eb6544cb3, type: 2}
+  - {fileID: 11400000, guid: 4442745065de23d41b5840ac91515c89, type: 2}
+  - {fileID: 11400000, guid: 1ce47317a92458e4cad48c9b5ca1483d, type: 2}
 --- !u!1 &829973840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,7 +1143,7 @@ MonoBehaviour:
   currentGridTile: {fileID: 0}
   pop: {fileID: 1916740523}
   sr: {fileID: 1366352034}
-  col1: {r: 0, g: 0, b: 0, a: 0}
+  col1: {r: 0, g: 0, b: 0, a: 0.6156863}
   col2: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &857882587
 Transform:
@@ -3016,7 +3019,10 @@ MonoBehaviour:
   vysunoutAnimator: {fileID: 1242615292}
   colorCardSelected: {r: 0.9339623, g: 0.4801976, b: 0.4801976, a: 1}
   colorCardDefault: {r: 1, g: 1, b: 1, a: 1}
-  parents: []
+  parents:
+  - {fileID: 11400000, guid: 6540fb2ea01cd1f4095072ba4a0b0b9e, type: 2}
+  - {fileID: 11400000, guid: 3a53b6f609a2bf24ca11d49c02145f5c, type: 2}
+  - {fileID: 11400000, guid: cd8365a303c056d4a839602c838251e2, type: 2}
 --- !u!1 &1963876797
 GameObject:
   m_ObjectHideFlags: 0

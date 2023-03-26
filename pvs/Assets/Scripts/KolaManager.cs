@@ -30,6 +30,8 @@ public class KolaManager : MonoBehaviour
         print(kolo);
         TimeRemaining = MaximumKoloMinutes * 60;
         inv.additemrandom();
+
+        Debug.Log(perlinSpawn.Spawn().Values);
     }
     private void Update()
     {
