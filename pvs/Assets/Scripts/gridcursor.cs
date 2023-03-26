@@ -19,6 +19,10 @@ public class gridcursor : MonoBehaviour
         {
             currentGridTile = Physics2D.OverlapCircle(transform.position + new Vector3(.5f,.5f), 0.4f).gameObject;
         }
+        if(Input.GetMouseButton(1))
+        {
+            currentGridTile.GetComponentInChildren<plant>().harvest();
+        }
     }
 
 

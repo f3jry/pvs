@@ -18,16 +18,20 @@ public class plant : MonoBehaviour
     public float range = 1;
     GridSystem gs;
     gridcursor gc;
+    inventory inv;
+    int level = 0;
     // Update is called once per frame
     private void Start()
     {
         gs = FindObjectOfType<GridSystem>();
+        gc = FindObjectOfType<gridcursor>();
         growstage = 0;
         pop = FindObjectOfType<KytkaPopUp>();
         km = FindObjectOfType<KolaManager>();
         ps.sprite = pr.FruitSprite;
         PlantManager.instance.allPlants.Add(this);
         ps.enabled = false;
+        inv = FindObjectOfType<inventory>();
         
     }
     private void OnMouseEnter()
@@ -56,7 +60,9 @@ public class plant : MonoBehaviour
         }
 
         if (growstage < 2) { growstage += 1; }
-        if(growstage == 2) { print(gs.GetNeighbourPlants(gc.currentGridTile.transform.position,1)); }
+        if(growstage == 2 && level == 0) {
+            level = 1;
+            print(GridSystem.instance.GetNeighbourPlants(gc.currentGridTile.transform.position,1)); }
 
 
     }
@@ -68,6 +74,18 @@ public class plant : MonoBehaviour
     {
         print("evolve  " + pr.AbilityName);
         GetComponent<PlantAbilities>().AddAbility(pr.AbilityName);
+    }
+    public void harvest()
+    {
+        if (vyrostla == true)
+        {
+            print("harvested");
+            vyrostla = false;
+            ps.enabled = true;
+            growstage = 1;
+            ps.enabled = false;
+            inv.additem(pr);
+        }
     }
 
 }

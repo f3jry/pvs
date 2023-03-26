@@ -20,7 +20,7 @@ public class PlantPlace : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && inv.selectedparent != null)
         {
             Placeplant(inv.selectedparent);
-            inv.deleteactive();
+            
         }
     }
     public void Placeplant(PlantParent pr)
@@ -31,7 +31,7 @@ public class PlantPlace : MonoBehaviour
         {
             GameObject insPlant = Instantiate(plant, cursor.currentGridTile.transform);
             insPlant.GetComponent<plant>().pr = pr;
-
+            inv.deleteactive();
 
         }
 

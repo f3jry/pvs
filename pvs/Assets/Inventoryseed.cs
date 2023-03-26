@@ -24,11 +24,11 @@ public class Inventoryseed : MonoBehaviour
     {
         if (ismouse)
         {
-            img.transform.position = Vector2.Lerp(img.transform.position, new Vector2(0, 70), 1);
+            //img.transform.position = Vector2.Lerp(img.transform.position, new Vector2(0, 70), 1);
         }
         else
         {
-            img.transform.position = Vector2.Lerp(img.transform.position, new Vector2(0, 0), 1);
+            // img.transform.position = Vector2.Lerp(img.transform.position, new Vector2(0, 0), 1);
         }
     }
 }

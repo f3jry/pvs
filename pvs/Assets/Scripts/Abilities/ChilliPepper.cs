@@ -18,7 +18,7 @@ public class ChilliPepper : AbilityBase
 
         foreach (GameObject item in neighbours)
         {
-            item.GetComponent<plant>().takedamage(); 
+            item.GetComponent<plant>().takedamage(1); 
         }
     }
 }
