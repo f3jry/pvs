@@ -24,7 +24,7 @@ public class inventory : MonoBehaviour
         GameObject seeditem = Instantiate(plantprefab);
         seeditem.transform.parent = spawnobject;
         Inventoryseed invseed = seeditem.GetComponent<Inventoryseed>();
-        invseed.seedimage.sprite = pr.FruitSprite;
+        //invseed.seedimage.sprite = pr.FruitSprite;
         invseed.pr = pr;
         inv.Add(invseed.gameObject);
         invseed.infotext.text = pr.Name;
@@ -46,7 +46,6 @@ public class inventory : MonoBehaviour
         if (Input.mouseScrollDelta.y > 0) { selectedplant -= 1; }
         if (selectedplant < 0) selectedplant = 0;
         if (selectedplant > inv.Count -1) selectedplant = inv.Count - 1;
-        print(selectedplant);
         if (inv.Count > 0)
         {
 

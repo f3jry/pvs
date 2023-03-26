@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class plant : MonoBehaviour
 {
-
-    public PlantParent pr;
+    public List<PlantParent> pr = new List<PlantParent>();
     public KytkaPopUp pop;
+<<<<<<< HEAD
     public SpriteRenderer ps;
     public SpriteRenderer plantsprite;
     KolaManager km;
@@ -15,24 +15,44 @@ public class plant : MonoBehaviour
     int growstage = 0;
     public Sprite growimage;
     public Sprite smallimage;
+=======
+
+    public List<GameObject> neighbours;
+
+    int hp;
+>>>>>>> ab626b35f878c61c58a6e1c2b288339a696054da
     public float range = 1;
+    int currentLevel = 0;
+    PlantParent extparent;
+
+    //3 not harvested, 2 NotHarvested+CannotBreed, 1 harvested waiting, 0 harvested
+    public int harvestedLevel;
+
+    KolaManager km;
     GridSystem gs;
     gridcursor gc;
     inventory inv;
+<<<<<<< HEAD
     int level = 0;
     public Color col;
     PlantParent extparent;
     public GameObject hromada;
+=======
+    private void Awake()
+    {
+        gs = GridSystem.instance;
+        gc = FindObjectOfType<gridcursor>();
+        pop = FindObjectOfType<KytkaPopUp>();
+        km = FindObjectOfType<KolaManager>();
+        inv = FindObjectOfType<inventory>();
+
+    }
+>>>>>>> ab626b35f878c61c58a6e1c2b288339a696054da
     // Update is called once per frame
     private void Start()
     {
-        gs = FindObjectOfType<GridSystem>();
-        gc = FindObjectOfType<gridcursor>();
-        growstage = 0;
-        pop = FindObjectOfType<KytkaPopUp>();
-        km = FindObjectOfType<KolaManager>();
-        ps.sprite = pr.FruitSprite;
         PlantManager.instance.allPlants.Add(this);
+<<<<<<< HEAD
         ps.enabled = false;
         inv = FindObjectOfType<inventory>();
         
@@ -76,37 +96,93 @@ public class plant : MonoBehaviour
         }
 
 
+=======
+        currentLevel = 0;
+        GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, "WIP", hp, pr);
+>>>>>>> ab626b35f878c61c58a6e1c2b288339a696054da
     }
+ 
     public void takedamage(int damage)
     {
         hp -= damage;
     }
-    public void evolve()
+
+    public void grow()
     {
-        if (level == 0 | level == 1)
+        if (harvestedLevel < 3)
         {
-            print("evolve  " + pr.AbilityName);
-            GetComponent<PlantAbilities>().AddAbility(pr.AbilityName);
-            plantsprite.color = col;
+            harvestedLevel += 1;
         }
-        else if(level == 2 && extparent != null)
+
+        GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, "WIP", hp, pr, (harvestedLevel < 2));
+
+
+
+        if (currentLevel < 2)
         {
-            print("evolve  " + extparent.AbilityName);
-            GetComponent<PlantAbilities>().AddAbility(extparent.AbilityName);
-            plantsprite.color = col;
-            
+            currentLevel += 1;
         }
+
+
+
+
     }
-    public void harvest()
+
+    public void evolve(PlantParent to)
     {
-        if (vyrostla == true)
+        if (currentLevel >= 3) return;
+
+        currentLevel += 1;
+        print(transform.parent.name + "  " + to.AbilityName);
+
+        pr.Add(to);
+        GetComponent<PlantVisualManager>().UpdateSprites(currentLevel,"WIP", hp, pr);
+
+        
+    }
+
+    public void Breed()
+    {
+
+        if (currentLevel == 2 && harvestedLevel == 3)
         {
-            print("harvested");
-            vyrostla = false;
-            ps.enabled = true;
-            growstage = 1;
-            ps.enabled = false;
-            inv.additem(pr);
+            neighbours = GridSystem.instance.GetNeighbourPlants(GridSystem.instance.NameToVector(transform.parent.name), 2);
+            neighbours.Remove(this.gameObject);
+
+            if (neighbours.Count > 0)
+            {
+                neighbours[Random.Range(0, neighbours.Count)].GetComponent<plant>().evolve(pr[0]);
+
+               
+
+
+                harvest(false);
+            }
+        }
+
+
+    }
+
+    public void Takedamage(int amount)
+    {
+
+    }
+
+    public void harvest(bool addToInv)
+    {
+
+        if (currentLevel > 1 && harvestedLevel >= 2)
+        {
+            GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, "WIP", hp, pr, true);
+            harvestedLevel = 0;
+
+            if (addToInv)
+            {
+                foreach (var item in pr)
+                {
+                    inv.additem(item);
+                }
+            }
         }
     }
     private void Update()

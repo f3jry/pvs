@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a80a7a85d4aaa43be1a9720bd16d06, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
-  FruitSprite: {fileID: 21300000, guid: ef3db94593626c84b8500296df0adcdb, type: 3}
+  FruitSprite_LVL1_1: {fileID: 21300000, guid: 08d4c4dd9b93244499fc75c9f6b61224, type: 3}
+  FruitSprite_LVL_2_1: {fileID: 21300000, guid: 7b8c0964bbad88c48a3cf88636978a11, type: 3}
+  FruitSprite_LVL_2_2: {fileID: 21300000, guid: ef3db94593626c84b8500296df0adcdb, type: 3}
+  FruitSprite_LVL_3_1: {fileID: 21300000, guid: 08bfaf76c09e9a644b8f7ca781f2c736, type: 3}
+  FruitSprite_LVL_3_2: {fileID: 21300000, guid: 94afc5dd0979c6a40b65ca6146eedc4d, type: 3}
+  FruitSprite_LVL_3_3: {fileID: 21300000, guid: caaf03f7bb58e9342bef1d3c7102767a, type: 3}
   Name: Apple
   AbilityDescription: Heal everything in  range by 0.5 HP every round
   AbilityName: Heal

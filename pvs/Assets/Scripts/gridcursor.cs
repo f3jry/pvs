@@ -29,11 +29,14 @@ public class gridcursor : MonoBehaviour
         }
         if(Input.GetMouseButton(1))
         {
-            currentGridTile.GetComponentInChildren<plant>().harvest();
+            currentGridTile?.GetComponentInChildren<plant>()?.harvest(true);
         }
+
+        /*
         PlantParent f = currentGridTile.GetComponentInChildren<plant>().pr;
+
         print(f);
-        pop.Pop(f.Name, f.AbilityDescription, f.FruitSprite);
+        pop.Pop(f.Name, f.AbilityDescription, f.FruitSprite);*/
         //currentGridTile.GetComponentInChildren<plant>().dosom();
     }
 
