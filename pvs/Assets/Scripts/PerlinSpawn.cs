@@ -6,8 +6,6 @@ public class PerlinSpawn : MonoBehaviour
 {
     public PestParent[] pestTypes;
     public static PerlinSpawn instance;
-    //GameObject pestToSpawnObject;
-    //int AmountToSpawn = 0;
     int Level = 1;
     KolaManager kolaManager;
 
