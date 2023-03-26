@@ -3244,7 +3244,13 @@ MonoBehaviour:
   vysunoutAnimator: {fileID: 1242615292}
   colorCardSelected: {r: 0.9339623, g: 0.4801976, b: 0.4801976, a: 1}
   colorCardDefault: {r: 1, g: 1, b: 1, a: 1}
-  parents: []
+  parents:
+  - {fileID: 11400000, guid: 6540fb2ea01cd1f4095072ba4a0b0b9e, type: 2}
+  - {fileID: 11400000, guid: 3a53b6f609a2bf24ca11d49c02145f5c, type: 2}
+  - {fileID: 11400000, guid: cd8365a303c056d4a839602c838251e2, type: 2}
+  - {fileID: 11400000, guid: edb92cd76f647d84d96dd8064619a602, type: 2}
+  - {fileID: 11400000, guid: 391b91e7ea94aed40b390aabf5d29b2c, type: 2}
+  - {fileID: 11400000, guid: 3ad0aec03d5100f4b8e4df87652910c2, type: 2}
 --- !u!1001 &1945174299
 PrefabInstance:
   m_ObjectHideFlags: 0

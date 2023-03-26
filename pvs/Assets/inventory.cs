@@ -24,14 +24,14 @@ public class inventory : MonoBehaviour
         GameObject seeditem = Instantiate(plantprefab);
         seeditem.transform.parent = spawnobject;
         Inventoryseed invseed = seeditem.GetComponent<Inventoryseed>();
-        //invseed.seedimage.sprite = pr.FruitSprite;
+        invseed.seedimage.sprite = pr.FruitSprite_LVL1_1;
         invseed.pr = pr;
         inv.Add(invseed.gameObject);
         invseed.infotext.text = pr.Name;
     }
     public void additemrandom()
     {
-        additem(parents[Random.Range(0, 3)]);
+        additem(parents[Random.Range(0, 4)]);
     }
     private void Start()
     {
