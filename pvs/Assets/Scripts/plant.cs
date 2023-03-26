@@ -17,6 +17,7 @@ public class plant : MonoBehaviour
     //3 not harvested, 2 NotHarvested+CannotBreed, 1 harvested waiting, 0 harvested
     public int harvestedLevel;
 
+
     KolaManager km;
     GridSystem gs;
     gridcursor gc;

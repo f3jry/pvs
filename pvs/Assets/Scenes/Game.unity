@@ -943,7 +943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462e5346a9fc4e140a500968804b1915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perlinSpawn: {fileID: 717543914}
+  perlinSpawn: {fileID: 0}
   kolo: 0
   MaximumKoloMinutes: 1
   RemainingTimeText: {fileID: 2064241680}
@@ -987,10 +987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc2535e1c93b3a4286bc76b3b199f0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pestTypes:
-  - {fileID: 11400000, guid: 9aaed96d289e7c446b7cb14eb6544cb3, type: 2}
-  - {fileID: 11400000, guid: 4442745065de23d41b5840ac91515c89, type: 2}
-  - {fileID: 11400000, guid: 1ce47317a92458e4cad48c9b5ca1483d, type: 2}
+  pestTypes: []
 --- !u!1 &829973840
 GameObject:
   m_ObjectHideFlags: 0
