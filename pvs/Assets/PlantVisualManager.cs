@@ -7,14 +7,17 @@ public class PlantVisualManager : MonoBehaviour
     public Sprite StonekG_small, StonekY_small, StonekB_small;
     public Sprite StonekG_middle, StonekY_middle, StonekB_middle;
     public Sprite StonekG_big, StonekY_big, StonekB_big;
+    public Sprite Snek_small, Snek_middle, Snek_big;
+    public Sprite Housk_small, Housk_middle, Housk_big;
+    public Sprite Aphid_small, Aphid_middle, Aphid_big;
 
     [Space(30)]
     public SpriteRenderer Stonek;
-    public SpriteRenderer infekce;
+    public SpriteRenderer pestRenderer;
     public SpriteRenderer Plod1S, Plod2S, Plod3S;
 
 
-    public void UpdateSprites(int level, string infekce, int health, List<PlantParent> pr, bool harvested = false)
+    public void UpdateSprites(int level, string pest, int health, List<PlantParent> pr, bool harvested = false)
     {
         if (level > 1)
         {
@@ -22,7 +25,19 @@ public class PlantVisualManager : MonoBehaviour
             {
                 if (level > 3)
                 {
-                    Stonek.sprite = StonekG_big;
+                    if (health >= 6)
+                    {
+                        Stonek.sprite = StonekG_big;
+
+                    }
+                    else if (health > 1)
+                    {
+                        Stonek.sprite = StonekY_big;
+                    }
+                    else
+                    {
+                        Stonek.sprite = StonekB_big;
+                    }
 
                     if (!harvested)
                     {
@@ -39,7 +54,19 @@ public class PlantVisualManager : MonoBehaviour
                 }
                 else
                 {
-                    Stonek.sprite = StonekG_middle;
+                    if (health >= 6)
+                    {
+                        Stonek.sprite = StonekG_middle;
+
+                    }
+                    else if (health > 1)
+                    {
+                        Stonek.sprite = StonekY_middle;
+                    }
+                    else
+                    {
+                        Stonek.sprite = StonekB_middle;
+                    }
 
                     if (!harvested)
                     {
@@ -52,6 +79,11 @@ public class PlantVisualManager : MonoBehaviour
                         Plod2S.sprite = null;
                     }
 
+
+                    if (pest == "Aphid") { pestRenderer.sprite = Aphid_big; }
+                    else if (pest == "Caterpillar") { pestRenderer.sprite = Housk_big; }
+                    else if (pest == "Snail") { pestRenderer.sprite = Snek_big; }
+                    else { pestRenderer.sprite = null; }
 
                 }
             }
@@ -68,12 +100,35 @@ public class PlantVisualManager : MonoBehaviour
                     Plod1S.sprite = null;
                 }
 
+                if (pest == "Aphid") { pestRenderer.sprite = Aphid_middle; }
+                else if (pest == "Caterpillar") { pestRenderer.sprite = Housk_middle; }
+                else if (pest == "Snail") { pestRenderer.sprite = Snek_middle; }
+                else { pestRenderer.sprite = null; }
+
             }
 
         }
         else
         {
-            Stonek.sprite = StonekG_small;
+            if(health >= 6)
+            {
+                Stonek.sprite = StonekG_small;
+
+            }else if(health > 1)
+            {
+                Stonek.sprite = StonekY_small;
+            }
+            else
+            {
+                Stonek.sprite = StonekB_small;
+            }
+
+            if (pest == "Aphid"){pestRenderer.sprite = Aphid_small;} 
+            else if (pest == "Caterpillar"){pestRenderer.sprite = Housk_small;}
+            else if (pest == "Snail") { pestRenderer.sprite = Snek_small;}
+            else{ pestRenderer.sprite = null;}
         }
+
+
     }
 }

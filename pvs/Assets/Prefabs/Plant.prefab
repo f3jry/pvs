@@ -144,7 +144,6 @@ MonoBehaviour:
   neighbours: []
   range: 1
   harvestedLevel: 0
-  AbilityEffectMultiplier: 1
 --- !u!114 &8652808530323565244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,8 +179,17 @@ MonoBehaviour:
   StonekG_big: {fileID: 21300000, guid: 947942c999749a045b007776db5c2edb, type: 3}
   StonekY_big: {fileID: 21300000, guid: 86d731c957fc3e04688a400195088cc5, type: 3}
   StonekB_big: {fileID: 21300000, guid: 2c15220e6eead56489e40fd900fbfea9, type: 3}
+  Snek_small: {fileID: 21300000, guid: eb06b2f6fb3bcee4b9f2ed7de5afdd23, type: 3}
+  Snek_middle: {fileID: 21300000, guid: 71bc046d699ec554da8cbe99ea1d61de, type: 3}
+  Snek_big: {fileID: 21300000, guid: d9bdf3c338a7e994a9c215280b4c877a, type: 3}
+  Housk_small: {fileID: 21300000, guid: d34c62c9f173c114da1e96735fc17136, type: 3}
+  Housk_middle: {fileID: 21300000, guid: 71676bf18cb1a5e43bf8ea54f3c6f739, type: 3}
+  Housk_big: {fileID: 21300000, guid: 13405716bdc66b742992d6d36828709c, type: 3}
+  Aphid_small: {fileID: 21300000, guid: f863c17df92d3ac4aa2ca71307677615, type: 3}
+  Aphid_middle: {fileID: 21300000, guid: 5aacbed09da308944a284a2b19c030ad, type: 3}
+  Aphid_big: {fileID: 21300000, guid: b3d003d0a39d193459237be1a32d875c, type: 3}
   Stonek: {fileID: 2392655425943184851}
-  infekce: {fileID: 5015846366069301854}
+  pestRenderer: {fileID: 5015846366069301854}
   Plod1S: {fileID: 8002266432559082167}
   Plod2S: {fileID: 4729821695325063925}
   Plod3S: {fileID: 6290876693761280799}
@@ -339,7 +347,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6562030334153309511}
   - component: {fileID: 5015846366069301854}
-  - component: {fileID: 948849698229928722}
   m_Layer: 0
   m_Name: infekce
   m_TagString: Untagged
@@ -414,18 +421,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &948849698229928722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4970893437516019450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 471184da7bb78394787e9a7f86aee23c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7527495710566187864
 GameObject:
   m_ObjectHideFlags: 0
