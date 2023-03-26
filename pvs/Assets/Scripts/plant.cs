@@ -9,7 +9,8 @@ public class plant : MonoBehaviour
 
     public List<GameObject> neighbours;
 
-    int hp;
+    int MaxHp = 6;
+    int hp = 6;
     public float range = 1;
     int currentLevel = 0;
     PlantParent extparent;
@@ -40,7 +41,14 @@ public class plant : MonoBehaviour
  
     public void takedamage(int damage)
     {
-        hp -= damage;
+        if(hp - damage <= MaxHp)
+        {
+            hp -= damage;
+        }
+        else
+        {
+            hp = MaxHp;
+        }
     }
 
     public void grow()
@@ -99,10 +107,6 @@ public class plant : MonoBehaviour
 
     }
 
-    public void Takedamage(int amount)
-    {
-
-    }
 
     public void harvest(bool addToInv)
     {
