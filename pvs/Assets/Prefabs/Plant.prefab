@@ -95,9 +95,11 @@ GameObject:
   - component: {fileID: 94947125352702914}
   - component: {fileID: 149234764326775778}
   - component: {fileID: 8652808530323565244}
+  - component: {fileID: 1837894708320411293}
   - component: {fileID: 8353221110767403362}
   - component: {fileID: 4152346328098207084}
-  - component: {fileID: 1837894708320411293}
+  - component: {fileID: 745819628133722056}
+  - component: {fileID: 6286375195081239885}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Untagged
@@ -139,12 +141,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pr: []
   pop: {fileID: 0}
+  neighbours: []
   range: 1
-<<<<<<< HEAD
-  col: {r: 0.4575472, g: 0.91491663, b: 1, a: 1}
-  hromada: {fileID: 8277055313157172968, guid: 63258c1bb31f85e4395d4f5d8f28d00c, type: 3}
-=======
->>>>>>> ab626b35f878c61c58a6e1c2b288339a696054da
+  harvestedLevel: 0
+  AbilityEffectMultiplier: 1
 --- !u!114 &8652808530323565244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,6 +158,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentAbilities: []
+  AbilityEffectMultiplier: 1
+--- !u!114 &1837894708320411293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012303176969726791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b1e4b43164ca344bb77fb3a442f453, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StonekG_small: {fileID: 21300000, guid: 34efa7f581843264a8bab9cef115ced1, type: 3}
+  StonekY_small: {fileID: 21300000, guid: 363957b5996d7864dbc7a02793fb6518, type: 3}
+  StonekB_small: {fileID: 21300000, guid: 9586159489fdf004b8594a30c5b4cee0, type: 3}
+  StonekG_middle: {fileID: 21300000, guid: 752a80451ab8804499a4e780a19f7e40, type: 3}
+  StonekY_middle: {fileID: 21300000, guid: e701dd9034e776a4b9abb941dbe70b7f, type: 3}
+  StonekB_middle: {fileID: 21300000, guid: cb54d0caab39a8e4997c60a323973150, type: 3}
+  StonekG_big: {fileID: 21300000, guid: 947942c999749a045b007776db5c2edb, type: 3}
+  StonekY_big: {fileID: 21300000, guid: 86d731c957fc3e04688a400195088cc5, type: 3}
+  StonekB_big: {fileID: 21300000, guid: 2c15220e6eead56489e40fd900fbfea9, type: 3}
+  Stonek: {fileID: 2392655425943184851}
+  infekce: {fileID: 5015846366069301854}
+  Plod1S: {fileID: 8002266432559082167}
+  Plod2S: {fileID: 4729821695325063925}
+  Plod3S: {fileID: 6290876693761280799}
 --- !u!114 &8353221110767403362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +215,7 @@ MonoBehaviour:
   thisPlant: {fileID: 0}
   abilityName: 
   OnlyOnStart: 1
---- !u!114 &1837894708320411293
+--- !u!114 &745819628133722056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -197,23 +224,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 4012303176969726791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1b1e4b43164ca344bb77fb3a442f453, type: 3}
+  m_Script: {fileID: 11500000, guid: 88c6cbd9cd41b6d42bc1f342e44c7163, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StonekG_small: {fileID: 21300000, guid: 34efa7f581843264a8bab9cef115ced1, type: 3}
-  StonekY_small: {fileID: 21300000, guid: 363957b5996d7864dbc7a02793fb6518, type: 3}
-  StonekB_small: {fileID: 21300000, guid: 9586159489fdf004b8594a30c5b4cee0, type: 3}
-  StonekG_middle: {fileID: 21300000, guid: 752a80451ab8804499a4e780a19f7e40, type: 3}
-  StonekY_middle: {fileID: 21300000, guid: e701dd9034e776a4b9abb941dbe70b7f, type: 3}
-  StonekB_middle: {fileID: 21300000, guid: cb54d0caab39a8e4997c60a323973150, type: 3}
-  StonekG_big: {fileID: 21300000, guid: 947942c999749a045b007776db5c2edb, type: 3}
-  StonekY_big: {fileID: 21300000, guid: 86d731c957fc3e04688a400195088cc5, type: 3}
-  StonekB_big: {fileID: 21300000, guid: 2c15220e6eead56489e40fd900fbfea9, type: 3}
-  Stonek: {fileID: 2392655425943184851}
-  infekce: {fileID: 5015846366069301854}
-  Plod1S: {fileID: 8002266432559082167}
-  Plod2S: {fileID: 4729821695325063925}
-  Plod3S: {fileID: 6290876693761280799}
+  thisPlant: {fileID: 0}
+  abilityName: 
+  OnlyOnStart: 0
+--- !u!114 &6286375195081239885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012303176969726791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73657c1221f4e72438fb814f3e97367f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisPlant: {fileID: 0}
+  abilityName: 
+  OnlyOnStart: 1
 --- !u!1 &4704884481449557732
 GameObject:
   m_ObjectHideFlags: 0
