@@ -6,7 +6,7 @@ public class plant : MonoBehaviour
 {
     public List<PlantParent> pr = new List<PlantParent>();
     public KytkaPopUp pop;
-<<<<<<< HEAD
+
     public SpriteRenderer ps;
     public SpriteRenderer plantsprite;
     KolaManager km;
@@ -15,12 +15,11 @@ public class plant : MonoBehaviour
     int growstage = 0;
     public Sprite growimage;
     public Sprite smallimage;
-=======
+
 
     public List<GameObject> neighbours;
 
-    int hp;
->>>>>>> ab626b35f878c61c58a6e1c2b288339a696054da
+
     public float range = 1;
     int currentLevel = 0;
     PlantParent extparent;
@@ -28,16 +27,12 @@ public class plant : MonoBehaviour
     //3 not harvested, 2 NotHarvested+CannotBreed, 1 harvested waiting, 0 harvested
     public int harvestedLevel;
 
-    KolaManager km;
     GridSystem gs;
     gridcursor gc;
     inventory inv;
-<<<<<<< HEAD
     int level = 0;
     public Color col;
-    PlantParent extparent;
     public GameObject hromada;
-=======
     private void Awake()
     {
         gs = GridSystem.instance;
@@ -47,12 +42,11 @@ public class plant : MonoBehaviour
         inv = FindObjectOfType<inventory>();
 
     }
->>>>>>> ab626b35f878c61c58a6e1c2b288339a696054da
+
     // Update is called once per frame
     private void Start()
     {
         PlantManager.instance.allPlants.Add(this);
-<<<<<<< HEAD
         ps.enabled = false;
         inv = FindObjectOfType<inventory>();
         
@@ -95,11 +89,8 @@ public class plant : MonoBehaviour
             }
         }
 
-
-=======
         currentLevel = 0;
         GetComponent<PlantVisualManager>().UpdateSprites(currentLevel, "WIP", hp, pr);
->>>>>>> ab626b35f878c61c58a6e1c2b288339a696054da
     }
  
     public void takedamage(int damage)
