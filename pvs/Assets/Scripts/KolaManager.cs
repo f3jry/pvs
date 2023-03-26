@@ -7,6 +7,7 @@ using TMPro;
 public class KolaManager : MonoBehaviour
 {
     public static KolaManager KolaManagerInstance;
+    public PerlinSpawn perlinSpawn;
     public int kolo = 1; // aktualni kolo
     float TimeRemaining;
     public float MaximumKoloMinutes;
@@ -23,6 +24,7 @@ public class KolaManager : MonoBehaviour
     public void dalsikolo() // pridej jedno kolo
     {
         PlantManager.instance.updateplants();
+        perlinSpawn.Spawn();
         kolo ++;
         print(kolo);
         TimeRemaining = MaximumKoloMinutes * 60;
