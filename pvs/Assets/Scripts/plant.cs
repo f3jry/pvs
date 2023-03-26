@@ -34,7 +34,7 @@ public class plant : MonoBehaviour
         inv = FindObjectOfType<inventory>();
         
     }
-    private void OnMouseEnter()
+    public void dosom()
     {
         if (pop != null) { pop.Pop(pr.Name, pr.AbilityDescription, pr.FruitSprite); }
     }

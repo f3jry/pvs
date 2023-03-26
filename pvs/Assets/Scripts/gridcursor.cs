@@ -24,9 +24,10 @@ public class gridcursor : MonoBehaviour
         {
             currentGridTile.GetComponentInChildren<plant>().harvest();
         }
-        PlantParent f = GetComponentInChildren<plant>().pr;
+        PlantParent f = currentGridTile.GetComponentInChildren<plant>().pr;
         print(f);
         pop.Pop(f.Name, f.AbilityDescription, f.FruitSprite);
+        //currentGridTile.GetComponentInChildren<plant>().dosom();
     }
 
 
